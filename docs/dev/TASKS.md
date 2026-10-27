@@ -60,11 +60,12 @@ Each task includes focused test-first behavior checks where meaningful, implemen
             Acceptance: R-09 local window composition; nodeIntegration false, contextIsolation/sandbox true, no preload bridge, denied unexpected navigation/new windows/permissions and correct close lifecycle. R-01–03 remain shared, without a forked desktop color model.
             Verification: npm run build:browser; python tools/check.py electron. Check host configuration and local entry/asset resolution, plus available runtime behavior; native Windows exclusions must be explicit and do not block feasible work.
             Evidence: Implemented the local Electron host with retained single-window ownership, no renderer Node/preload/IPC bridge, context isolation/sandbox/web security, denied unexpected navigation/popups/permissions, no default menu and close/error lifecycle. Staged the same browser UI without a server; version0.2.0 and pinned Electron45/packager20.3 dependencies. RED3 behavioral failures; GREEN Electron API-boundary suite3 passed; UI2 passed in each Chromium/Firefox. Host checks are modeled, not native Windows execution. Detailed evidence docs/dev/reports/phases/2/T-007.md; complete runtime packaging remains T-008.
-        - [ ] T-008 — Package the complete Windows x64 runtime
+        - [x] T-008 — Package the complete Windows x64 runtime
             Depends on: T-007.
             Scope: tools/package.mjs Electron assembly with @electron/packager, runtime/licenses/resources and Windows archive inspection in tests/test_electron.py.
             Acceptance: R-09 complete portable ZIP with executable/native runtime/app resources and notices; safe relocatable extraction, no source checkout, separate Node installation, server or elevation needed. Report unsigned status.
             Verification: npm run package:electron; python tools/check.py electron. Validate actual archive/PE architecture/resource and relative entry contents, integrity and feasible extracted launch. Unavailable native launch is excluded and reported; inability to produce the artifact is a real build blocker.
+            Evidence: Complete unsigned Windows x64 portable archive produced with Electron45 runtime. RED missing archive; GREEN electron5 passed, including actual AMD64 PE, CRC, local renderer/version and byte equality for all unchanged upstream SDK resources/licenses. Default checksum validation retained. Native Windows launch unavailable/excluded; see docs/dev/reports/phases/2/T-008.md.
         - [ ] T-009 — Verify cumulative browser and desktop distribution
             Depends on: T-007, T-008.
             Scope: docs/INSTALL.md, README, cumulative package selection/metadata, tests/test_release.py and earlier-platform regressions.
