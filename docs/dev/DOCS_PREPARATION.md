@@ -6,7 +6,7 @@
 - Current pass and scope: onepass; complete Hello World application across browser, Windows Electron, and Chromium/Firefox sidebar extensions.
 - Approval/delegation basis: PROJECT approved by the user's “k” response to the published proposal at 9106f4c05408c07feff7e0a3680b353a963b30ed. ARCHITECTURE through TASKS are preapproved by autodoc. The user delegates unspecified behavior/platform adaptations to document preparation, with material choices presented at applicable review checkpoints.
 - Tracking/publication selection: enabled for documentation and implementation by existing root AGENTS.md. Publish and verify each commit. Repository operations and three cumulative platform releases are within the development request.
-- Next boundary: publish/read back DOCS-008 and verify issue #8 completed closure, then stop after DOCS-008 before package QC and implementation.
+- Next boundary: publish DOCS-009, close issue 9, integrate/verify/publish documentation and close its milestone, then activate Phase 1 and implement T-001 through T-018 with three cumulative releases. User “Do QC and implement” explicitly advances the prior stop and selects the complete implementation range.
 - Reporting: Standard; concise progress and consequential decisions.
 
 ## Scope sequence
@@ -25,7 +25,7 @@ One document pass covers the entire user request. The three platform delivery ph
 | DOCS-006 | Onepass; autodoc preapproval from user request and PROJECT approval applies. PLAN/SPEC strategy Ready for layout; three ordered platform phases, delivery milestone counts 2/1/2 justified for small cohesive outcomes, mandatory phase reviews and postintegration cumulative releases. TASKS awaits combined layout review. `docs/dev/PLAN.md` SHA-256 `c7b6d4b6c0a5a975dd1f8303ed3e4a2bb0c72cb8928f34e8f18c499459b8b872`; `docs/dev/PLAN-REVIEW-REPORT.md` SHA-256 `121d018358f3bc5de71d40ee4afa41fdb0e2f8f3beb83474822c36cfc5c9774b`. Publication and issue closure follow this commit and require actual readback. |
 | DOCS-007 | Onepass; autodoc preapproval from user request and PROJECT approval applies. Combined PLAN/layout conformance Ready; component-to-source/test/build/document ownership, isolated ignored generated paths and planned command interfaces assessed. PLAN-REVIEW-REPORT Revision 1 preserves initial strategy evidence. `docs/dev/layout.md` SHA-256 `fa5cbc5d3b77c72ea102006f41ff44b436e8044d85da0ec3b4fdbbc70339ec72`; `docs/dev/PLAN-REVIEW-REPORT.md` SHA-256 `e05efd1e7e15934ebd7f60c8619fbeb3ce627dfbc32eb8b6485adb4149a37d21`. Publication and issue closure follow this commit and require actual readback. |
 | DOCS-008 | Onepass; autodoc preapproval from user request and PROJECT approval applies. TASKS/PLAN conformance Ready after TASKS-01 correction/recheck; 18 tasks across three phases (14 delivery, four review), all dependencies and review thresholds validated. Autodoc onepass ends here; package QC/implementation await advance. `docs/dev/TASKS.md` SHA-256 `637aebed34d991190c6cc899f8a2ce4401a70f0c2cfe6130af2fdc568761b56c`; `docs/dev/TASKS-REVIEW-REPORT.md` SHA-256 `3816133146b8a45f0cd17bb61e6c8e317eed339dc410a4a67d847fbfec7ea4cd`. Publication and issue closure follow this commit and require actual readback. |
-| DOCS-009 | Not selected at autodoc stop; package QC remains pending. |
+| DOCS-009 | User explicitly selected QC/implementation. Whole-package QC Ready at source 079916bf43a2ebb80a9e0c308dfd1bf839de1e96; DOCS-QC-REPORT.md SHA-256 `14c44074785a0c7fb385f9b50542c24ca1a34f86223991504c735383a7a6e551`. Publish/close/integrate/milestone effects follow and require confirmation. |
 
 Material proposals are in [PROJECT](PROJECT.md): session-only color; narrow-window stacking; Windows x64 unsigned portable archive; toolbar activation with temporary access; isolated page overlay; per-window active-tab following and per-document state; explicit reactivation after full navigation; unsupported-page disabled controls; no signing/store delivery. These agent proposals were presented in the brief and accepted through the user's approval of that published PROJECT state. A shared native DOM approach is recommended over a full framework for the limited UI. Precise module and API contracts remain for downstream design.
 
@@ -59,3 +59,7 @@ After DOCS-008 first completion and verified issue closure at 23818b50a1a3b1c01e
 - Current `TASKS-REVIEW-REPORT.md` SHA-256: `7b3bd8c78532ff035f45db8fa4de6a05c7f034b26352843e156ebddb84a4f757`.
 
 Current scoped gates: Ready; no remaining confirmed authoring finding. Publish/read back this correction, reconcile hosted evidence and stop before whole-package QC.
+
+## Advance to implementation
+
+The user instructed “Do QC and implement” after the autodoc stop. This authorizes DOCS-009, prerequisite published documentation integration, final implementation checkpoint continuation, T-001–T-018, eligible-phase tracking and all three requested cumulative releases. No new product scope or repeated approval is required. Current whole-package gate: Ready; publication/issue 9 closure, preparation merge and milestone closure remain pending until observed.

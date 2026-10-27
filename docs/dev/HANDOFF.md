@@ -1,6 +1,6 @@
 # Project handoff
 
-Checkpoint: autodoc/onepass through DOCS-008, first completion published and closed; scoped content corrections prepared for publication.
+Checkpoint: DOCS-009 whole-package QC Ready, user-authorized transition to full implementation.
 Recover subsequent publication and hosted effects from Git and the linked records; this snapshot cannot prove its own later push or issue closure.
 
 Outcome: accepted PROJECT and autodoc-preapproved ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout and TASKS prepared; scoped SPEC, PLAN/layout and TASKS reviews support their respective downstream gates. TASKS defines 18 unchecked implementation tasks across the three requested platform phases. No product implementation or whole-package QC performed.
@@ -36,3 +36,7 @@ Outcome: accepted PROJECT and autodoc-preapproved ARCHITECTURE, DECOMPOSITION, S
 - Pause at the autodoc boundary. An explicit QC advance selects DOCS-009 review and in-scope repairs; passing scoped reports do not replace that assessment.
 - After passing whole-package QC: publish its owning result, close issue 9, explicitly merge documentation into actual main, verify/publish the merge, then close/read back the preparation milestone. Preserve the final implementation checkpoint unless its preapproval and range are established.
 - Implementation uses phase branches and one verified task per commit, publication/readback before advancement and eligible phase-only tracking. Version targets: browser 0.1.0, desktop 0.2.0, paired sidebars 0.3.0. Report unavailable native/full-browser evidence under policy without dropping artifacts or feasible checks.
+
+## QC advance checkpoint
+
+The user “Do QC and implement” advances the prior stop and selects all T-001–T-018 and three cumulative platform releases. [DOCS-QC-REPORT](DOCS-QC-REPORT.md) assesses the complete source at 079916bf43a2ebb80a9e0c308dfd1bf839de1e96 as Ready; no product execution is claimed. Publish/verify this owning result and issue 9 closure, explicitly merge/verify/publish documentation into main, then close/read back milestone 1. Those effects are pending, not proven by this snapshot. Afterward activate Phase 1 and proceed through the already authorized range; no additional final-checkpoint approval pause is required.
