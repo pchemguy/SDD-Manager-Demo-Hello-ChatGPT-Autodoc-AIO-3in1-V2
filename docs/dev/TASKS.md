@@ -6,38 +6,43 @@ Each task includes focused test-first behavior checks where meaningful, implemen
 
 ## Phase 1 — Browser app
 
-- [ ] Phase 1 — Browser app
-    - [ ] Milestone 1.1 — Usable browser experience
-        - [ ] T-001 — Establish isolated tooling and representative browser execution
+- [x] Phase 1 — Browser app
+    - [x] Milestone 1.1 — Usable browser experience
+        - [x] T-001 — Establish isolated tooling and representative browser execution
             Depends on: none, after accepted preparation integration and Phase 1 tracking activation.
             Scope: package/lockfiles, contained pytest support requirements, tools/check.py dispatcher, tests/test_environment.py and bounded Node probes; ignore owned generated paths. Establish version 0.1.0 and planned command interfaces, selecting pinned supported dependency versions without implementing future platform runtime.
             Acceptance: dedicated absolute browser/Python paths and isolated profiles; Chromium shell and managed Firefox each assessed with two context/page interaction/render/teardown cycles. Provisioning and mode diagnosis evidence is separate from app acceptance. Follow policy recovery for full Chromium and Firefox EPERM; do not treat an unavailable full mode as failure of working headless coverage.
             Verification: npm ci; python tools/check.py environment --browser chromium; python tools/check.py environment --browser firefox. Record versions, commands, effective binaries/modes, source/integrity and actual exclusions in task evidence.
-        - [ ] T-002 — Implement shared color views and browser composition
+            Evidence: Provisioned locked Playwright 1.64.1/esbuild 0.28.2 and project-local pytest 9.1.1 support; npm ci passed. Chromium shell 156.0.8078.4 and Firefox 157.0 each passed a pytest capability check with two isolated interaction/render/teardown cycles and inspected screenshots. CDN returned invalid HTML; matching official OCI layer size/digests verified before Chromium/FFmpeg extraction. Firefox uid_map EPERM diagnosed and process-local local-fixture override verified. No product acceptance or Windows/native-sidebar compatibility claimed. Detailed evidence: docs/dev/reports/phases/1/T-001.md. Phase 1 tracking and published preparation baseline verified.
+        - [x] T-002 — Implement shared color views and browser composition
             Depends on: T-001.
             Scope: src/core/colors.js, src/ui/message.js, src/ui/color-controls.js, src/browser entry/composition and initial tools/build.mjs browser staging; tests/test_model.py and initial tests/test_ui.py/probes.
             Acceptance: R-01 and R-03 core behavior; exact text, initial red, ordered native radio group, all immediate colors and exclusive selection; invalid model input unchanged; independent memory state and reload reset. Shared modules contain no platform APIs or persistence.
             Verification: npm run build:browser; python tools/check.py model; python tools/check.py ui --browser chromium; python tools/check.py ui --browser firefox. Exercise real rendered interaction and DOM/component disposal; document module interfaces and actual limitations.
-        - [ ] T-003 — Complete responsive and accessible browser behavior
+            Evidence: Implemented the pure red/blue/green model, reusable DOM message/radio controls, document-local composition and initial production browser build. RED: model suite failed two behavioral expectations against the public seam; built-UI suite failed messageCount 0 versus 1. GREEN: model 2 passed; built UI 1 passed in each Chromium and Firefox, including exact text/labels/colors, exclusivity, independent page state, reload reset and component disposal. Build and ASCII checks passed. Responsive layout is T-003 scope; no package/native-platform acceptance claimed.
+        - [x] T-003 — Complete responsive and accessible browser behavior
             Depends on: T-001, T-002.
             Scope: src/ui/app.css and composition styling, tests/test_ui.py and screenshots/probes; concise browser usage guidance.
             Acceptance: R-02 at wide/narrow/short viewports and 200% zoom; independently centered main panel, right settings, narrow stacking, no overlap/clipping; native keyboard/labels and visible focus. Browser R-01–03 remain satisfied.
             Verification: python tools/check.py ui --browser chromium; python tools/check.py ui --browser firefox. Inspect screenshots and numeric geometry/color assertions, not text alone.
             Milestone exit: review all 1.1 code, rerun applicable browser/model checks, fix blockers, retain actual environment versus product evidence and report limits. Commit milestone report docs/dev/reports/phases/1/1.1.md and refreshed HANDOFF with this result/checkbox. Report TODOs as None or justified eligible findings.
-    - [ ] Milestone 1.2 — Deployable browser package
-        - [ ] T-004 — Build and verify a relocatable browser distribution
+    - [x] Milestone 1.2 — Deployable browser package
+            Evidence: Completed responsive browser layout and native keyboard/focus accessibility. RED: geometry gap -1264 before CSS; GREEN: final built UI suite 2 passed in each Chromium and Firefox, model regression 2 passed. Main center stays 640 at width 1280 despite settings-width changes; right gap24; 768/767 breakpoint, 320px stack, short-window access and CSS200% zoom pass. Screenshots inspected. Whole milestone1.1 code reviewed separately; no blocker/TODO. Report docs/dev/reports/phases/1/1.1.md and HANDOFF included. CSS-zoom/headless evidence is not native browser-chrome or OS-focus verification.
+        - [x] T-004 — Build and verify a relocatable browser distribution
             Depends on: T-003 and milestone 1.1 completion/closure.
             Scope: tools/build.mjs, browser staging, tools/package.mjs browser allowlist/archive/licenses, tests/test_browser_package.py.
             Acceptance: static runtime loads from an extracted archive under a non-root HTTP subpath, with local assets and no Node/server dependency for end users beyond static hosting. R-03 and browser R-10 archive root/version/exclusion rules hold.
             Verification: npm run build:browser; npm run package:browser; python tools/check.py browser-package. Exercise extracted assets in both usable browsers and validate ZIP paths, local references, notices and forbidden-file absence.
-        - [ ] T-005 — Complete browser installation and package evidence
+            Evidence: Implemented clean explicit browser staging, version/source/development metadata, runtime/license allowlist and deterministic safe ZIP construction. RED: three archive tests failed for an empty artifact and missing entry point. GREEN: browser-package suite 3 passed, including actual extracted files under /nested/app in Chromium and Firefox with correct red-to-blue interaction and no asset/page errors. Archive contains exactly index.html, app.js, style.css, build-info.json and LICENSE; CRC check passed. Uncommitted builds are marked developmentBuild rather than falsely pinned to clean release source. README build guidance updated; final cumulative instructions/checksums are T-005.
+        - [x] T-005 — Complete browser installation and package evidence
             Depends on: T-004.
             Scope: docs/INSTALL.md, README, package metadata/checksum/evidence generation and tests/test_release.py browser subset.
             Acceptance: release-ready 0.1.0 browser ZIP, INSTALL.md, VERIFICATION.md and SHA256SUMS agree with pinned source/version; installation and performed/excluded checks are truthful. Package documentation contains no future-platform delivery claim.
             Verification: npm run package:all; python tools/check.py release --version 0.1.0. Recompute hashes and inspect actual output; publication download checks occur after integration in the release transition.
             Milestone exit: whole 1.2 code/package review, extracted-package regressions and blocker repair; commit docs/dev/reports/phases/1/1.2.md, TODO dispositions and HANDOFF with this result/checkbox.
-    - [ ] Milestone 1.3 — Phase review
-        - [ ] T-006 — Review, test and report the browser phase
+    - [x] Milestone 1.3 — Phase review
+            Evidence: Completed browser install/verification records, cumulative package:all and exact SHA256SUMS. RED: release inventory failed for three missing companion documents; GREEN: release 2 passed, browser-package 3 passed, strengthened UI 2 passed per browser. Repeat same-input builds produced identical artifact hashes and removed synthetic stale staging material. Separate read-only reviewer found no Critical/Important defect; minor BR-01 companion provenance and BR-02 bidirectional page-independence test gaps were verified and resolved. Whole milestone1.2 code/package review, report docs/dev/reports/phases/1/1.2.md, TODO None and HANDOFF included. Release integration/download verification remain pending.
+        - [x] T-006 — Review, test and report the browser phase
             Depends on: T-003, T-005 and milestones 1.1/1.2 completion/closure.
             Scope: full Phase 1 code review and applicable model/UI/package regressions; prepare complete release notes and source/artifact coverage, docs/dev/reports/phases/1/PHASE-REPORT.md and HANDOFF.
             Acceptance: scoped R-01–03/R-10–11 exits, task persistence audit and required findings resolved; clearly separate observed checks and unavailable evidence. No extension/Electron requirement is pulled into browser acceptance.
@@ -48,6 +53,7 @@ Each task includes focused test-first behavior checks where meaningful, implemen
 
 - [ ] Phase 2 — Windows Electron app
     - [ ] Milestone 2.1 — Portable desktop delivery
+            Evidence: Reviewed complete browser phase source, tests, packages and public claims; no remaining blocker/TODO. Clean candidate package:all built; model2 + Chromium UI2 + Firefox UI2 + extracted browser-package3 + clean-source release2 = 11 passing test executions. Independent review minor BR-01/BR-02 resolved. T-001–T-005 single-task result/evidence/checkbox commits audited and published. Phase report, HANDOFF, exact 0.1.0 notes and ignored highlights coverage prepared. Source/tag/asset publication is a pending postintegration transition, not claimed complete; native evidence limits retained.
         - [ ] T-007 — Host the shared browser UI in constrained Electron
             Depends on: T-006, Phase 1 published integration/release and Phase 2 activation.
             Scope: src/electron/main.cjs, desktop local entry wiring and tests/test_electron.py/probes; version 0.2.0 and required pinned desktop dependencies.

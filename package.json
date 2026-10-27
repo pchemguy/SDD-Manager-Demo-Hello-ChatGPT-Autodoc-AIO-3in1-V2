@@ -1,0 +1,20 @@
+{
+  "name": "hello-world-platforms",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build:browser": "node tools/build.mjs --platform browser",
+    "package:browser": "node tools/package.mjs --platform browser",
+    "package:electron": "node tools/package.mjs --platform electron",
+    "package:extensions": "node tools/package.mjs --platform extensions",
+    "package:all": "node tools/package.mjs --platform all"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "playwright": "1.64.1"
+  }
+}
