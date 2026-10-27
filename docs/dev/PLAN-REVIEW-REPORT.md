@@ -2,7 +2,7 @@
 
 ## Current gate
 
-State: Ready for layout preparation, strategy scope only. TASKS derivation remains blocked until layout and combined assessment. Reviewed PLAN against the complete accepted design/SPEC and current SPEC review. No PLAN children.
+State: Ready for TASKS derivation after combined PLAN/layout assessment. Initial strategy review and its limited scope remain below. PLAN and layout have no focused children.
 
 ## Reviewed identities
 
@@ -33,3 +33,14 @@ Owner: sdd-plan, 2026-10-27. Compared each phase's useful scope, dependencies an
 Findings: none in strategy. Narrow milestone counts are justified by the small application's real outcomes; splitting to reach a numerical target would add overhead. Each phase has a bounded useful increment and explicit earlier-platform regression route. Review obligations, final TODO aggregation and postintegration release transition are present. No unavailable-native prerequisite or new application feature is introduced.
 
 Checks: complete manual conformance/semantic review, source-hash inventory and local links/Markdown checks. Limits: physical placement has not yet been assessed; no application or artifact execution, whole-package QC or hosted phase activation performed.
+
+## Revision 1 — Combined layout review
+
+Owner: sdd-plan, 2026-10-27. This is the planned placement recheck after strategy acceptance, not a repair of a fabricated finding. PLAN and upstream design/SPEC bytes are unchanged from initial reviewed identities.
+
+- `layout.md`: SHA-256 `fa5cbc5d3b77c72ea102006f41ff44b436e8044d85da0ec3b4fdbbc70339ec72`.
+- `PLAN.md`: SHA-256 `c7b6d4b6c0a5a975dd1f8303ed3e4a2bb0c72cb8928f34e8f18c499459b8b872` (unchanged).
+
+Mapped every decomposed production component to source, tests/probes, build/package ownership and user/evidence documentation. Checked the reverse ownership map, inward import rules, native adapter separation, phase-specific runtime output, ignored dedicated environments and archive allowlists. The proposed root command interface supports bounded TASKS verification without claiming scripts exist. Native/full-browser exclusions remain evidence limits rather than mandatory native-only tasks.
+
+Local links and heading/list separation checked; physical directories are clearly marked planned. Counts and scope rationale from initial review remain applicable. Findings: none. Combined gate: Ready; no remaining blocker to task derivation. Actual implementations, tools, browser execution, CI access and artifact builds remain unverified.

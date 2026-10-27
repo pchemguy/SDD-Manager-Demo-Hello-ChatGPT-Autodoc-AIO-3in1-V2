@@ -53,3 +53,7 @@ Maintain project-specific navigation and validated setup/check commands here as 
 ## Current project navigation
 
 The [PROJECT brief](docs/dev/PROJECT.md) describes the proposed Hello World application. [DOCS_TASKS](docs/dev/DOCS_TASKS.md) owns preparation checkboxes and [DOCS_PREPARATION](docs/dev/DOCS_PREPARATION.md) owns decisions, approvals and QC evidence. Recover later state through [HANDOFF](docs/dev/HANDOFF.md) and Git before continuing. No product build or test commands are established yet.
+
+## Design and implementation locations
+
+The intended system is defined by [ARCHITECTURE](docs/dev/ARCHITECTURE.md), [DECOMPOSITION](docs/dev/DECOMPOSITION.md), [SPEC](docs/dev/SPEC.md), [PLAN](docs/dev/PLAN.md) and [layout](docs/dev/layout.md). Layout owns proposed source/test/tool paths and future command interfaces; none of those commands is validated merely by appearing in documentation. Tests use pytest orchestration and ASCII-only script sources. Follow browser policy and its unavailable-native/full-browser scope without substituting personal browser installations.
