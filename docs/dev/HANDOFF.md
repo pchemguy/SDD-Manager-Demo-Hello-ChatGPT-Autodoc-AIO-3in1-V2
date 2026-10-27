@@ -1,6 +1,6 @@
 # Project handoff
 
-Checkpoint: Phase 1 complete, integrated and release v0.1.0 published/download-verified.
+Checkpoint: Phase 2 T-007 host logic and local renderer staging verified; publication pending.
 Recover subsequent publication and hosted effects from Git and the linked records; this snapshot cannot prove its own later push or issue closure.
 
 Outcome: accepted PROJECT and autodoc-preapproved ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout and TASKS prepared; scoped SPEC, PLAN/layout and TASKS reviews support their respective downstream gates. TASKS defines 18 unchecked implementation tasks across the three requested platform phases. No product implementation or whole-package QC performed.
@@ -24,9 +24,9 @@ Outcome: accepted PROJECT and autodoc-preapproved ARCHITECTURE, DECOMPOSITION, S
 
 ## Branches and return
 
-- Working branch: main (phase integration/release transition).
+- Working branch: phase/2-windows-electron.
 - Creation parent / integration target: main.
-- Branch-off commit: a65cd7b80c4e73c37c084119d646e8e9ed70569d.
+- Branch-off commit: 5f182884c29f9509d740656077cf0324681822e4.
 - Parent main currently contains only initial repository contents and the published provenance scaffold merge, not this unfinished documentation branch.
 - Retain design-docs/ai-logs after its verified seed/merge; manual transcripts are not selected or created. No suspended implementation parent.
 
@@ -70,3 +70,9 @@ Complete source 162a62adfb6c6cc0012edaafa6c6de61357db357 from phase/1-browser-ap
 ## Observed v0.1.0 completion
 
 Release https://github.com/pchemguy/SDD-Manager-Demo-Hello-ChatGPT-Autodoc-AIO-3in1-V2/releases/tag/v0.1.0 at source 63ba58dbb86b91bb7ec53116ec3f581ea3454ad6 has complete expected assets and matching downloaded API bytes; published body equals retained notes and latest readback matches. No publication effect remains pending for this phase. Working branch main now records the completed outcome. Next: activate Phase 2 only, then continue the authorized remaining task range and cumulative releases.
+
+## Phase 2 entry and T-007
+
+Published/download-verified v0.1.0 and its outcome checkpoint 5f182884c29f9509d740656077cf0324681822e4 precede this phase branch. Phase 2 projection is fully verified: sdd-phase-2-Windows-Electron-app; milestone 2.1 is native 5 and review 2.2 is native 6; task issues T-007–T-010 are 16–19. No Phase 3 objects were created.
+
+T-007 host and local staging pass three modeled Electron API-boundary checks; browser UI regressions pass in both browsers. See reports/phases/2/T-007.md for exact limits. Publish/read back this task and close issue16 before T-008 creates the full Windows runtime. User still authorizes all remaining tasks and both cumulative releases; no native Windows facility is presumed or required as an additional gate.

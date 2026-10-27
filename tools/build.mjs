@@ -16,8 +16,22 @@ export async function buildBrowser() {
   await fs.writeFile('build/browser/build-info.json', JSON.stringify({ version, sourceCommit, developmentBuild }, null, 2) + '\n');
   console.log('Built browser runtime.');
 }
+/** Stage the common renderer and native host, without a development server. */
+export async function buildElectronInput() {
+  await buildBrowser();
+  const destination = 'build/electron/app';
+  await fs.rm(destination, { recursive: true, force: true });
+  await fs.mkdir(destination, { recursive: true });
+  await fs.cp('build/browser', `${destination}/browser`, { recursive: true });
+  await fs.copyFile('src/electron/main.cjs', `${destination}/main.cjs`);
+  await fs.copyFile('LICENSE', `${destination}/LICENSE`);
+  const { version } = JSON.parse(await fs.readFile('package.json', 'utf8'));
+  await fs.writeFile(`${destination}/package.json`, JSON.stringify({ name: 'hello-world', productName: 'Hello World', version, main: 'main.cjs', author: 'PChemGuy', description: 'Session-only Hello World color selector', license: 'MIT' }, null, 2) + '\n');
+  console.log('Staged local Electron app.');
+}
 if (process.argv[1] && pathToFileURL(process.argv[1]).href === import.meta.url) {
   const platform = process.argv[process.argv.indexOf('--platform') + 1];
-  if (platform !== 'browser') throw new Error('Unsupported build platform: ' + platform);
-  await buildBrowser();
+  if (platform === 'browser') await buildBrowser();
+  else if (platform === 'electron') await buildElectronInput();
+  else throw new Error('Unsupported build platform: ' + platform);
 }

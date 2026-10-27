@@ -54,11 +54,12 @@ Each task includes focused test-first behavior checks where meaningful, implemen
 - [ ] Phase 2 — Windows Electron app
     - [ ] Milestone 2.1 — Portable desktop delivery
             Evidence: Reviewed complete browser phase source, tests, packages and public claims; no remaining blocker/TODO. Clean candidate package:all built; model2 + Chromium UI2 + Firefox UI2 + extracted browser-package3 + clean-source release2 = 11 passing test executions. Independent review minor BR-01/BR-02 resolved. T-001–T-005 single-task result/evidence/checkbox commits audited and published. Phase report, HANDOFF, exact 0.1.0 notes and ignored highlights coverage prepared. Source/tag/asset publication is a pending postintegration transition, not claimed complete; native evidence limits retained.
-        - [ ] T-007 — Host the shared browser UI in constrained Electron
+        - [x] T-007 — Host the shared browser UI in constrained Electron
             Depends on: T-006, Phase 1 published integration/release and Phase 2 activation.
             Scope: src/electron/main.cjs, desktop local entry wiring and tests/test_electron.py/probes; version 0.2.0 and required pinned desktop dependencies.
             Acceptance: R-09 local window composition; nodeIntegration false, contextIsolation/sandbox true, no preload bridge, denied unexpected navigation/new windows/permissions and correct close lifecycle. R-01–03 remain shared, without a forked desktop color model.
             Verification: npm run build:browser; python tools/check.py electron. Check host configuration and local entry/asset resolution, plus available runtime behavior; native Windows exclusions must be explicit and do not block feasible work.
+            Evidence: Implemented the local Electron host with retained single-window ownership, no renderer Node/preload/IPC bridge, context isolation/sandbox/web security, denied unexpected navigation/popups/permissions, no default menu and close/error lifecycle. Staged the same browser UI without a server; version0.2.0 and pinned Electron45/packager20.3 dependencies. RED3 behavioral failures; GREEN Electron API-boundary suite3 passed; UI2 passed in each Chromium/Firefox. Host checks are modeled, not native Windows execution. Detailed evidence docs/dev/reports/phases/2/T-007.md; complete runtime packaging remains T-008.
         - [ ] T-008 — Package the complete Windows x64 runtime
             Depends on: T-007.
             Scope: tools/package.mjs Electron assembly with @electron/packager, runtime/licenses/resources and Windows archive inspection in tests/test_electron.py.

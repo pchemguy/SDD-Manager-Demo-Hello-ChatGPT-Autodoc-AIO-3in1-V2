@@ -65,3 +65,7 @@ The intended system is defined by [ARCHITECTURE](docs/dev/ARCHITECTURE.md), [DEC
 ## Validated browser commands
 
 The browser phase implements npm ci, npm run build:browser, npm run package:browser and npm run package:all. Pytest suites model, ui (--browser chromium or firefox), browser-package and release (--version 0.1.0) are validated through python tools/check.py. Install Python dependencies into .tools/python from requirements-dev.txt; browser binaries remain under the absolute project .tools/browsers path. The diagnosed Firefox process-local override and official OCI Chromium provenance are in reports/phases/1/T-001.md; do not apply those environment settings to untrusted external browsing. Packaging future platforms remains gated by their tasks.
+
+## Desktop development
+
+Electron development dependencies require Node.js 22.12+. The internal node tools/build.mjs --platform electron command stages host plus local renderer. python tools/check.py electron currently verifies real host logic against a modeled Electron API boundary and staged assets; native Windows execution is not implied. Complete runtime packaging is owned by T-008.
