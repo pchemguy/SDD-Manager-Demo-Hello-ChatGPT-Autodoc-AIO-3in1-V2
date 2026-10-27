@@ -29,9 +29,31 @@ export async function buildElectronInput() {
   await fs.writeFile(`${destination}/package.json`, JSON.stringify({ name: 'hello-world', productName: 'Hello World', version, main: 'main.cjs', author: 'PChemGuy', description: 'Session-only Hello World color selector', license: 'MIT' }, null, 2) + '\n');
   console.log('Staged local Electron app.');
 }
+/** Bundle every extension entry as a local classic script for its native lifecycle. */
+export async function buildExtension(platform) {
+  if (!['chromium', 'firefox'].includes(platform)) throw Error('Unknown extension platform');
+  const destination = `build/extensions/${platform}`;
+  await fs.rm(destination, { recursive: true, force: true });
+  await fs.mkdir(destination, { recursive: true });
+  const manifest = JSON.parse(await fs.readFile(`src/extensions/${platform}/manifest.json`, 'utf8'));
+  const { version } = JSON.parse(await fs.readFile('package.json', 'utf8'));
+  manifest.version = version;
+  await fs.writeFile(`${destination}/manifest.json`, JSON.stringify(manifest, null, 2) + '\n');
+  for (const [entry, name] of [[`src/extensions/${platform}/background.js`, 'background.js'], ['src/extensions/page-entry.js', 'page.js'], ['src/extensions/sidebar/main.js', 'sidebar.js']]) {
+    await build({ entryPoints: [entry], bundle: true, format: 'iife', outfile: `${destination}/${name}`, target: ['chrome116', 'firefox128'], sourcemap: false });
+  }
+  await fs.copyFile('src/extensions/sidebar/sidebar.html', `${destination}/sidebar.html`);
+  await fs.copyFile('src/extensions/sidebar/sidebar.css', `${destination}/sidebar.css`);
+  await fs.copyFile('LICENSE', `${destination}/LICENSE`);
+  const sourceCommit = execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim();
+  const developmentBuild = Boolean(execFileSync('git', ['status', '--porcelain=v1'], { encoding: 'utf8' }).trim());
+  await fs.writeFile(`${destination}/build-info.json`, JSON.stringify({ version, sourceCommit, developmentBuild }, null, 2) + '\n');
+  console.log('Built ' + platform + ' extension.');
+}
 if (process.argv[1] && pathToFileURL(process.argv[1]).href === import.meta.url) {
   const platform = process.argv[process.argv.indexOf('--platform') + 1];
   if (platform === 'browser') await buildBrowser();
   else if (platform === 'electron') await buildElectronInput();
+  else if (platform === 'chromium') await buildExtension(platform);
   else throw new Error('Unsupported build platform: ' + platform);
 }
