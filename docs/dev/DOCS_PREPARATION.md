@@ -6,7 +6,7 @@
 - Current pass and scope: onepass; complete Hello World application across browser, Windows Electron, and Chromium/Firefox sidebar extensions.
 - Approval/delegation basis: PROJECT approved by the user's “k” response to the published proposal at 9106f4c05408c07feff7e0a3680b353a963b30ed. ARCHITECTURE through TASKS are preapproved by autodoc. The user delegates unspecified behavior/platform adaptations to document preparation, with material choices presented at applicable review checkpoints.
 - Tracking/publication selection: enabled for documentation and implementation by existing root AGENTS.md. Publish and verify each commit. Repository operations and three cumulative platform releases are within the development request.
-- Next boundary: record PROJECT approval, then continue through DOCS-008 and stop before DOCS-009 package QC and implementation.
+- Next boundary: publish/read back DOCS-003 and verify issue #3 completed closure, then continue to DOCS-004 under autodoc preapproval; stop after DOCS-008 before package QC and implementation.
 - Reporting: Standard; concise progress and consequential decisions.
 
 ## Scope sequence
@@ -19,7 +19,7 @@ One document pass covers the entire user request. The three platform delivery ph
 | --- | --- |
 | DOCS-001 | Existing four root files preserved byte for byte against initial commit f7bbec9bb22184bba19ed84097a7387aecd8e9c2; no copies needed. Provenance seed and merge verified below. Local task/control/handoff records created. Publication and issue closure must be confirmed from Git/provider. |
 | DOCS-002 | Onepass PROJECT proposal: `PROJECT.md`, SHA-256 `7e0d00117f35fe45c3b2893aaf2876ef344b53cda1c5e0573ba48c0fb54645e6`. Accepted unchanged by the user's “k” on 2026-10-27; DOCS-002 closes with this approval checkpoint. Reviewed against full seed, principal-scope boundaries, material lifecycle/permission/layout decisions and delivery requirements. |
-| DOCS-003 | Pending PROJECT acceptance; later checkpoint preapproved by autodoc. |
+| DOCS-003 | Onepass; autodoc preapproval from user request and PROJECT approval applies. Architecture reviewed against approved PROJECT: inward dependencies, page-owned state, least required privileges, browser-specific background adapters, static packaging and native-verification limits; no unresolved scope conflict. `docs/dev/ARCHITECTURE.md` SHA-256 `6a82ed8ff4d94257c16a5e4ed9afbdc90ce1b2c3a70e6ff6297fbb66aa603cbc`. Publication and issue closure follow this commit and require actual readback. |
 | DOCS-004 | Pending architecture; checkpoint preapproved by autodoc. |
 | DOCS-005 | Pending design and SPEC QC; checkpoint preapproved by autodoc. |
 | DOCS-006 | Pending SPEC and strategy QC; checkpoint preapproved by autodoc. |
@@ -41,9 +41,7 @@ Material proposals are in [PROJECT](PROJECT.md): session-only color; narrow-wind
 
 ## Pending transitions
 
-Initialization commit 83278d9756e616bbe7a6327246cf5b782e59ade0 was pushed with exact-ref readback; issue 1 evidence and completed closure verified through the supplied-token API. The GitHub app connection returned 403 Resource not accessible by integration for comment/update; it remains suitable for reads, while the supplied token successfully performs the required writes. No credential value is retained here.
-
-Publish/read back the PROJECT acceptance checkpoint and verify issue 2 closure, then continue sequentially through DOCS-008 under autodoc preapproval. The documentation milestone remains open. Stop before package QC and implementation.
+DOCS-001 through DOCS-002 publication and completed issue closures have been verified before this document was authored. Publish/read back this DOCS-003 checkpoint, then verify its completed issue closure. The documentation milestone and DOCS-009 remain open. No implementation phase is activated. Continue only after these required effects are confirmed.
 
 ## Platform evidence consulted
 
