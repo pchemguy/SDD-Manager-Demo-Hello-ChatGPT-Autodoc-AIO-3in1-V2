@@ -1,6 +1,6 @@
 # Project handoff
 
-Checkpoint: Phase 1 review and local exits verified; T-006 publication/integration/release pending.
+Checkpoint: Phase 1 complete, integrated and release v0.1.0 published/download-verified.
 Recover subsequent publication and hosted effects from Git and the linked records; this snapshot cannot prove its own later push or issue closure.
 
 Outcome: accepted PROJECT and autodoc-preapproved ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout and TASKS prepared; scoped SPEC, PLAN/layout and TASKS reviews support their respective downstream gates. TASKS defines 18 unchecked implementation tasks across the three requested platform phases. No product implementation or whole-package QC performed.
@@ -66,3 +66,7 @@ Both delivery milestones and issues T-001–T-005 are closed/read back. Final ph
 ## Phase 1 integration checkpoint
 
 Complete source 162a62adfb6c6cc0012edaafa6c6de61357db357 from phase/1-browser-app is integrating into main at a65cd7b80c4e73c37c084119d646e8e9ed70569d. All selected task closing boundaries audited; task/review milestone closures verified. Prospective production/tool/test bytes match the verified phase source. Target publication and the cumulative release remain pending until read back. The authorized complete range continues through T-018; next phase requires the current release outcome.
+
+## Observed v0.1.0 completion
+
+Release https://github.com/pchemguy/SDD-Manager-Demo-Hello-ChatGPT-Autodoc-AIO-3in1-V2/releases/tag/v0.1.0 at source 63ba58dbb86b91bb7ec53116ec3f581ea3454ad6 has complete expected assets and matching downloaded API bytes; published body equals retained notes and latest readback matches. No publication effect remains pending for this phase. Working branch main now records the completed outcome. Next: activate Phase 2 only, then continue the authorized remaining task range and cumulative releases.

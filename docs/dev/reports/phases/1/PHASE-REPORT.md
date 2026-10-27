@@ -23,3 +23,14 @@ Publish/read back T-006, close issue 15 and review milestone 4, verify all six t
 ## TODO
 
 None. Resolved BR-01/BR-02 remain documented in milestone 1.2; no deferred defect is carried forward.
+
+## Published release outcome
+
+Release [v0.1.0](https://github.com/pchemguy/SDD-Manager-Demo-Hello-ChatGPT-Autodoc-AIO-3in1-V2/releases/tag/v0.1.0) is published and latest at the completed readback. Eligible default-branch release source: `63ba58dbb86b91bb7ec53116ec3f581ea3454ad6`; release ID `425810137`. Annotated tag/source, exact commit/notes/published body, complete asset inventory and sizes/digests were verified. Every asset was downloaded through GitHub's authenticated release-asset API and independently hashed against the locally verified candidate. The first public browser-download URL for v0.1.0 returned 404 from this execution path; API byte verification succeeded instead. Authorization was stripped on any cross-origin redirect. No duplicate release or asset was created during recovery.
+
+- `INSTALL.md`: 1180 bytes, SHA-256 `f2ff317120ed6ac636de6f29bcc532e22460203f7bf07291ec3c8a040e2f80f8`.
+- `SHA256SUMS`: 255 bytes, SHA-256 `205a582b881d3db072be13531440b532b458896edb4c4f615774a8c1957402bb`.
+- `VERIFICATION.md`: 2186 bytes, SHA-256 `898841b38d0a3deab41173a8ef365a48b1377b92afd78f0fee97976c0ca6376b`.
+- `hello-world-0.1.0-browser.zip`: 3135 bytes, SHA-256 `c2d6cc3003a13637caae7c5d1fce8840f005a43446986e020d27dde51a116091`.
+
+The internal ignored highlights checkpoint was consumed only after exact published-body readback and downloaded-byte verification; retained RELEASE-NOTES.md remains. Native/platform limits from this report are unchanged.

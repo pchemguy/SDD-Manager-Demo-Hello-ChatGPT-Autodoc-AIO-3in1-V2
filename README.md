@@ -21,3 +21,5 @@ The Python dispatcher uses the dedicated dependency/browser locations. Validated
 The accepted [brief](docs/dev/PROJECT.md), [architecture](docs/dev/ARCHITECTURE.md), [specification](docs/dev/SPEC.md), [plan](docs/dev/PLAN.md) and [tasks](docs/dev/TASKS.md) define the complete intended product. Whole-package documentation QC passed before implementation. Current progress and pending effects are recoverable through [HANDOFF](docs/dev/HANDOFF.md).
 
 Development uses [SDD Manager](SDD-MANAGER.md). See the [AI-assisted development disclosure](AI_DISCLOSURE.md).
+
+Latest delivered release at this checkpoint: [v0.1.0](https://github.com/pchemguy/SDD-Manager-Demo-Hello-ChatGPT-Autodoc-AIO-3in1-V2/releases/tag/v0.1.0). All listed release assets were downloaded and checksum-verified through the release-asset API.
