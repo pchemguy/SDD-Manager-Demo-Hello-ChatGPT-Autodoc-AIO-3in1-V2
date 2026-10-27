@@ -6,7 +6,7 @@
 - Current pass and scope: onepass; complete Hello World application across browser, Windows Electron, and Chromium/Firefox sidebar extensions.
 - Approval/delegation basis: PROJECT approved by the user's “k” response to the published proposal at 9106f4c05408c07feff7e0a3680b353a963b30ed. ARCHITECTURE through TASKS are preapproved by autodoc. The user delegates unspecified behavior/platform adaptations to document preparation, with material choices presented at applicable review checkpoints.
 - Tracking/publication selection: enabled for documentation and implementation by existing root AGENTS.md. Publish and verify each commit. Repository operations and three cumulative platform releases are within the development request.
-- Next boundary: publish/read back DOCS-004 and verify issue #4 completed closure, then continue to DOCS-005 under autodoc preapproval; stop after DOCS-008 before package QC and implementation.
+- Next boundary: publish/read back DOCS-005 and verify issue #5 completed closure, then continue to DOCS-006 under autodoc preapproval; stop after DOCS-008 before package QC and implementation.
 - Reporting: Standard; concise progress and consequential decisions.
 
 ## Scope sequence
@@ -21,7 +21,7 @@ One document pass covers the entire user request. The three platform delivery ph
 | DOCS-002 | Onepass PROJECT proposal: `PROJECT.md`, SHA-256 `7e0d00117f35fe45c3b2893aaf2876ef344b53cda1c5e0573ba48c0fb54645e6`. Accepted unchanged by the user's “k” on 2026-10-27; DOCS-002 closes with this approval checkpoint. Reviewed against full seed, principal-scope boundaries, material lifecycle/permission/layout decisions and delivery requirements. |
 | DOCS-003 | Onepass; autodoc preapproval from user request and PROJECT approval applies. Architecture reviewed against approved PROJECT: inward dependencies, page-owned state, least required privileges, browser-specific background adapters, static packaging and native-verification limits; no unresolved scope conflict. `docs/dev/ARCHITECTURE.md` SHA-256 `6a82ed8ff4d94257c16a5e4ed9afbdc90ce1b2c3a70e6ff6297fbb66aa603cbc`. Publication and issue closure follow this commit and require actual readback. |
 | DOCS-004 | Onepass; autodoc preapproval from user request and PROJECT approval applies. Decomposition reviewed against PROJECT/ARCHITECTURE: single state owners, reusable views, explicit adapter/protocol seams, lifecycle cleanup and packaging/test responsibilities; no cycles or unresolved material decisions. `docs/dev/DECOMPOSITION.md` SHA-256 `7a341532ef2efb3bd4d5c27170241e49eeebf8e3275af61dc2c78bb97da90f6b`. Publication and issue closure follow this commit and require actual readback. |
-| DOCS-005 | Pending design and SPEC QC; checkpoint preapproved by autodoc. |
+| DOCS-005 | Onepass; autodoc preapproval from user request and PROJECT approval applies. SPEC/design conformance Ready; R-01–R-11 and grouped acceptance cover model/UI, layout, activation, document lifecycle, messaging/errors, complete artifacts and scoped verification. See SPEC-REVIEW-REPORT. `docs/dev/SPEC.md` SHA-256 `8739d95179473fed5f9e49917d150122c615ece31d15e756f509e0aaff39f23a`; `docs/dev/SPEC-REVIEW-REPORT.md` SHA-256 `3a4ee9b4f252a55721adafc3edb191d47ae393ba3388e9382ca80b9e4e9d039b`. Publication and issue closure follow this commit and require actual readback. |
 | DOCS-006 | Pending SPEC and strategy QC; checkpoint preapproved by autodoc. |
 | DOCS-007 | Pending PLAN and combined layout QC; checkpoint preapproved by autodoc. |
 | DOCS-008 | Pending preceding inputs and task QC; checkpoint preapproved by autodoc. |
@@ -41,7 +41,7 @@ Material proposals are in [PROJECT](PROJECT.md): session-only color; narrow-wind
 
 ## Pending transitions
 
-DOCS-001 through DOCS-003 publication and completed issue closures have been verified before this document was authored. Publish/read back this DOCS-004 checkpoint, then verify its completed issue closure. The documentation milestone and DOCS-009 remain open. No implementation phase is activated. Continue only after these required effects are confirmed.
+DOCS-001 through DOCS-004 publication and completed issue closures have been verified before this document was authored. Publish/read back this DOCS-005 checkpoint, then verify its completed issue closure. The documentation milestone and DOCS-009 remain open. No implementation phase is activated. Continue only after these required effects are confirmed.
 
 ## Platform evidence consulted
 
