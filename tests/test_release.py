@@ -23,7 +23,10 @@ def test_cumulative_inventory_and_checksum_bytes():
     version, names = selection()
     output = ROOT / 'dist' / version
     expected = names | {'INSTALL.md', 'VERIFICATION.md', 'SHA256SUMS'}
-    assert expected <= {p.name for p in output.iterdir()}, 'required cumulative artifact/document missing'
+    # Hidden atomic-copy staging siblings are not public release candidates.
+    # SHA256SUMS and the publisher's exact whitelist cover every selected asset.
+    actual = {p.name for p in output.iterdir() if not p.name.startswith('.')}
+    assert expected == actual, 'required cumulative artifact/document missing or unexpected output'
     entries = {}
     for line in (output / 'SHA256SUMS').read_text().splitlines():
         digest, name = line.split('  ', 1)
@@ -68,3 +71,20 @@ def test_runtime_provenance_and_no_development_material():
                 assert record['developmentBuild'] is False
                 assert record['sourceCommit'] == subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
     assert len(commits) == 1
+
+
+def test_extension_archives_are_complete_and_relocatable():
+    version, names = selection()
+    if int(version.split('.')[1]) < 3:
+        return
+    for platform, suffix in [('chromium','zip'),('firefox','xpi')]:
+        with zipfile.ZipFile(ROOT/'dist'/version/f'hello-world-{version}-{platform}.{suffix}') as archive:
+            assert set(archive.namelist())=={'manifest.json','background.js','page.js','sidebar.js','sidebar.html','sidebar.css','build-info.json','LICENSE'}
+            manifest=json.loads(archive.read('manifest.json'))
+            assert manifest['version']==version and manifest['manifest_version']==3
+            assert set(manifest['permissions'])==({'activeTab','scripting','sidePanel'} if platform=='chromium' else {'activeTab','scripting'})
+            assert not manifest.get('host_permissions') and not manifest.get('content_scripts')
+            html=archive.read('sidebar.html').decode()
+            for reference in re.findall(r'(?:src|href)="([^"]+)"',html):
+                assert reference in archive.namelist()
+            assert len(archive.read('page.js'))>100 and len(archive.read('sidebar.js'))>100

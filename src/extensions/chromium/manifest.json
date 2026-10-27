@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Hello World Color Sidebar",
+  "description": "Select the color of an isolated Hello World message on an activated webpage.",
+  "version": "0.3.0",
+  "minimum_chrome_version": "116",
+  "permissions": ["activeTab", "scripting", "sidePanel"],
+  "incognito": "not_allowed",
+  "action": {"default_title": "Activate Hello World on this page"},
+  "background": {"service_worker": "background.js"},
+  "side_panel": {"default_path": "sidebar.html"}
+}

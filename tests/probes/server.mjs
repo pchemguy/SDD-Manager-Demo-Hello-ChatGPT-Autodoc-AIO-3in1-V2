@@ -10,7 +10,7 @@ export async function serve(directory) {
       const relative = decodeURIComponent(url.pathname).replace(/^\/+/, '') || 'index.html';
       const file = path.resolve(base, relative);
       if (!file.startsWith(base + path.sep)) { response.writeHead(403).end(); return; }
-      const types = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json' };
+      const types = { '.html': 'text/html', '.xhtml': 'application/xhtml+xml', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json' };
       const data = await fs.readFile(file);
       response.writeHead(200, { 'Content-Type': types[path.extname(file)] || 'application/octet-stream', 'Cache-Control': 'no-store' });
       response.end(data);

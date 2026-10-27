@@ -1,36 +1,36 @@
 # Project handoff
 
-Checkpoint: Phase 2 complete, integrated and release v0.2.0 published/download-verified.
+Checkpoint: Phase 3 and complete implementation review Ready; T-018 publication/closure, main integration and final release pending.
 
 ## Workflow and authority
 
-SDD Manager implementation, branch phase/2-windows-electron. Governing [PROJECT](PROJECT.md), [ARCHITECTURE](ARCHITECTURE.md), [SPEC](SPEC.md), [PLAN](PLAN.md), [layout](layout.md), [TASKS](TASKS.md). The user accepted PROJECT with “k”, chose autodoc, then authorized “Do QC and implement”: complete T-001–T-018, all three platform phases, integration and cumulative releases. No further routine document approval is pending. Tracking is enabled by root AGENTS. Tokens remain outside committed source.
+SDD Manager main implementation. The user accepted PROJECT with “k”, chose autodoc and authorized “Do QC and implement”: T-001–T-018, all three ordered platform groups, integration and cumulative releases. No repeat approval is pending. Root AGENTS enables GitHub tracking. [TASKS](TASKS.md) owns results; [SPEC](SPEC.md)/[PLAN](PLAN.md)/[layout](layout.md) and accepted architecture own requirements. Document QC passed and preparation integration was published at a65cd7b80c4e73c37c084119d646e8e9ed70569d.
 
-## Results and evidence
+## Completed and current results
 
-Preparation QC passed and was integrated/published at a65cd7b80c4e73c37c084119d646e8e9ed70569d. Browser phase completed and release [v0.1.0](https://github.com/pchemguy/SDD-Manager-Demo-Hello-ChatGPT-Autodoc-AIO-3in1-V2/releases/tag/v0.1.0) was published and its four assets downloaded/hash verified. Source release commit 63ba58dbb86b91bb7ec53116ec3f581ea3454ad6. See [Phase 1 report](reports/phases/1/PHASE-REPORT.md).
+Browser v0.1.0 and cumulative browser/Windows v0.2.0 are published and all respective assets downloaded/hash verified. See [Phase1](reports/phases/1/PHASE-REPORT.md) and [Phase2](reports/phases/2/PHASE-REPORT.md). Release0.2 source38a0404e8f376ffeae28b4c4492f010c0cda831f; outcome checkpoint e1eb5d640b0386ddbff5d894f4e602f5a8008d01.
 
-Desktop T-007/T-008 host and complete unsigned runtime are committed/published; T-009 owns this checkpoint and [milestone review](reports/phases/2/2.1.md). Electron host checks are modeled; actual Windows ZIP/PE/runtime contents are inspected. Browser behavior is preserved. Windows-native launch/security/Explorer/SmartScreen checks are unavailable/excluded on Linux. Managed Chromium shell and Firefox run trusted local checks; the diagnosed Firefox sandbox override and official binary provenance are in Phase 1 evidence.
+T-011–014 implement page-owned sessions, window-bound sidebar and paired native adapters/bundles at0.3.0. Both independent review defects are fixed/rechecked. [Milestone3.1](reports/phases/3/3.1.md):22 protocol/sidebar/bundle test executions passed, no required defect/TODO. Native API transport is modeled; actual Firefox157 temporary installation succeeded. Full Chromium is blocked by Unix socket EPERM; interactive native toolbar/sidebar matrix is untested. Firefox metadata validator has0errors/2minimum-version advisories. Windows-native execution remains unavailable. Exact limits are in task reports.
 
-## Branch and tracking
+## Branch and hosted state
 
 - Working branch: main (phase integration/release transition).
-- Creation parent and integration target: main.
-- Branch-off commit: 5f182884c29f9509d740656077cf0324681822e4.
-- Phase 2 hosted issues 16–19, milestones 5 (2.1) and 6 (review) were projected and verified before execution. T-007/008 issues are closed. T-009 publication/closure follows this snapshot; then close milestone 5 after readback.
+- Creation parent/integration target: main.
+- Branch-off commit: e1eb5d640b0386ddbff5d894f4e602f5a8008d01.
+- Phase3 projected/read-back before work: milestones7(3.1),8(3.2),9(review), issues20–27. T-011–014 issues closed; T-015 publication/closure and milestone7 closure follow this snapshot.
 
 ## Next boundary
 
-Complete T-010 phase review, reports and release notes; integrate the fully verified phase explicitly into main, publish version 0.2.0 with rebuilt browser/Windows assets, verify downloaded bytes. Only then activate Phase 3. Continue through T-018 and all four version-0.3.0 packages/release; stop at the final verified publication outcome. No unresolved required defect or TODO at this checkpoint.
+After milestone7 closure, complete T-016 all four packages/instructions/evidence and T-017 feasible extracted lifecycle matrix plus preserved-platform regressions. T-018 owns full phase/final report and notes. Integrate the complete verified phase explicitly into main, publish a clean-source v0.3.0 release with all seven assets and verify downloaded bytes. Stop at the final verified publication outcome. Never relabel modeled checks as native sidebar evidence or unavailable checks as passes.
 
-## Phase review readiness
+## Current cumulative delivery checkpoint
 
-T-007–009 are published and issues closed; milestone 2.1 closure is reconciled before completion. Whole phase code review and 16 test executions passed; [phase report](reports/phases/2/PHASE-REPORT.md) and retained RELEASE-NOTES.md cover the desktop delta. No required defect/TODO remains. T-010 persistence and review milestone closure follow this checkpoint; then integrate/publish main and verify the cumulative v0.2.0 release before activating Phase 3.
+Milestone7/3.1 is closed/read back. T-016 seven canonical0.3 assets are built/verified and issue25 closed. T-017 [milestone3.2](reports/phases/3/3.2.md) records35 passing test executions including actual extracted packages/broker matrix, preserved browser/desktop artifacts, screenshots and native/validator limits. No required defect/TODO. T-017 publication/issue26 and milestone8 closure follow this snapshot. Then T-018 finishes phase/final review, all applicable regression evidence and notes; integrate/publish main and final v0.3.0 with downloaded-byte verification.
 
-## Phase 2 integration checkpoint
+## Final review checkpoint
 
-Complete source 171b60cd4d8c0e325126fc8afa6c3686aba2b705 from phase/2-windows-electron is integrating into main at 5f182884c29f9509d740656077cf0324681822e4. All selected task closing boundaries audited; task/review milestone closures verified. Prospective production/tool/test bytes match the verified phase source. Target publication and the cumulative release remain pending until read back. The authorized complete range continues through T-018; next phase requires the current release outcome.
+Milestones7/8 are closed/read back; T-001–017 published/closed. All12 applicable suite invocations passed41 executions at reviewed source3ca07f7680e4a29ffc092b9552b0e6a19c794738. Independent review required findings resolved; no remaining eligible TODO. [Phase3 report](reports/phases/3/PHASE-REPORT.md), [final report](reports/IMPLEMENTATION-REPORT.md) and retained RELEASE-NOTES.md cover delivery, exact platform development routes, native exclusions and validator advisories. T-018 result publication/issue27 and milestone9 closure follow; then explicitly integrate/publish main, rebuild clean release source, publish/tag v0.3.0 with all seven canonical assets and verify exact body/downloaded hashes. Stop after observed final publication; no further task range selected.
 
-## Observed v0.2.0 completion
+## Phase 3 integration checkpoint
 
-Release https://github.com/pchemguy/SDD-Manager-Demo-Hello-ChatGPT-Autodoc-AIO-3in1-V2/releases/tag/v0.2.0 at source 38a0404e8f376ffeae28b4c4492f010c0cda831f has complete expected assets and matching downloaded API bytes; published body equals retained notes and latest readback matches. No publication effect remains pending for this phase. Working branch main now records the completed outcome. Next: activate Phase 3 only, then continue the authorized remaining task range and cumulative releases.
+Complete source 89e247506fa59ecdda99a78fccc488e541dc7590 from phase/3-sidebar-extensions is integrating into main at e1eb5d640b0386ddbff5d894f4e602f5a8008d01. All selected task closing boundaries audited; task/review milestone closures verified. Prospective production/tool/test bytes match the verified phase source. Target publication and the cumulative release remain pending until read back. The authorized complete range continues through T-018; next phase requires the current release outcome.

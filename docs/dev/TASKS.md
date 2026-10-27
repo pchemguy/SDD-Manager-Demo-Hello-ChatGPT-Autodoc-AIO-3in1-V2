@@ -26,8 +26,8 @@ Each task includes focused test-first behavior checks where meaningful, implemen
             Acceptance: R-02 at wide/narrow/short viewports and 200% zoom; independently centered main panel, right settings, narrow stacking, no overlap/clipping; native keyboard/labels and visible focus. Browser R-01–03 remain satisfied.
             Verification: python tools/check.py ui --browser chromium; python tools/check.py ui --browser firefox. Inspect screenshots and numeric geometry/color assertions, not text alone.
             Milestone exit: review all 1.1 code, rerun applicable browser/model checks, fix blockers, retain actual environment versus product evidence and report limits. Commit milestone report docs/dev/reports/phases/1/1.1.md and refreshed HANDOFF with this result/checkbox. Report TODOs as None or justified eligible findings.
-    - [x] Milestone 1.2 — Deployable browser package
             Evidence: Completed responsive browser layout and native keyboard/focus accessibility. RED: geometry gap -1264 before CSS; GREEN: final built UI suite 2 passed in each Chromium and Firefox, model regression 2 passed. Main center stays 640 at width 1280 despite settings-width changes; right gap24; 768/767 breakpoint, 320px stack, short-window access and CSS200% zoom pass. Screenshots inspected. Whole milestone1.1 code reviewed separately; no blocker/TODO. Report docs/dev/reports/phases/1/1.1.md and HANDOFF included. CSS-zoom/headless evidence is not native browser-chrome or OS-focus verification.
+    - [x] Milestone 1.2 — Deployable browser package
         - [x] T-004 — Build and verify a relocatable browser distribution
             Depends on: T-003 and milestone 1.1 completion/closure.
             Scope: tools/build.mjs, browser staging, tools/package.mjs browser allowlist/archive/licenses, tests/test_browser_package.py.
@@ -40,8 +40,8 @@ Each task includes focused test-first behavior checks where meaningful, implemen
             Acceptance: release-ready 0.1.0 browser ZIP, INSTALL.md, VERIFICATION.md and SHA256SUMS agree with pinned source/version; installation and performed/excluded checks are truthful. Package documentation contains no future-platform delivery claim.
             Verification: npm run package:all; python tools/check.py release --version 0.1.0. Recompute hashes and inspect actual output; publication download checks occur after integration in the release transition.
             Milestone exit: whole 1.2 code/package review, extracted-package regressions and blocker repair; commit docs/dev/reports/phases/1/1.2.md, TODO dispositions and HANDOFF with this result/checkbox.
-    - [x] Milestone 1.3 — Phase review
             Evidence: Completed browser install/verification records, cumulative package:all and exact SHA256SUMS. RED: release inventory failed for three missing companion documents; GREEN: release 2 passed, browser-package 3 passed, strengthened UI 2 passed per browser. Repeat same-input builds produced identical artifact hashes and removed synthetic stale staging material. Separate read-only reviewer found no Critical/Important defect; minor BR-01 companion provenance and BR-02 bidirectional page-independence test gaps were verified and resolved. Whole milestone1.2 code/package review, report docs/dev/reports/phases/1/1.2.md, TODO None and HANDOFF included. Release integration/download verification remain pending.
+    - [x] Milestone 1.3 — Phase review
         - [x] T-006 — Review, test and report the browser phase
             Depends on: T-003, T-005 and milestones 1.1/1.2 completion/closure.
             Scope: full Phase 1 code review and applicable model/UI/package regressions; prepare complete release notes and source/artifact coverage, docs/dev/reports/phases/1/PHASE-REPORT.md and HANDOFF.
@@ -72,8 +72,8 @@ Each task includes focused test-first behavior checks where meaningful, implemen
             Acceptance: rebuilt version 0.2.0 browser/Windows archives, consistent source/version/hashes, correct static/portable instructions and candid evidence. Browser behavior and relocatable deployment remain intact.
             Verification: npm run package:all; python tools/check.py release --version 0.2.0; python tools/check.py browser-package; both browser ui suites and feasible electron suite.
             Milestone exit: review all 2.1 host/package/cumulative code, applicable tests and blocker repairs; commit docs/dev/reports/phases/2/2.1.md, TODO dispositions and refreshed HANDOFF with this result/checkbox.
-    - [x] Milestone 2.2 — Phase review
             Evidence: Cumulative0.2 browser/Windows packages and unsigned/static instructions verified. release2, browser-package3, electron5, Chromium UI2, Firefox UI2, model2 passed (16). Whole milestone source/package/doc review Ready; independent minor host-byte provenance gap fixed, no required defect/TODO. Milestone report docs/dev/reports/phases/2/2.1.md and refreshed HANDOFF included. Native Windows checks unavailable/excluded.
+    - [x] Milestone 2.2 — Phase review
         - [x] T-010 — Review, test and report the desktop phase
             Depends on: T-009 and milestone 2.1 completion/closure.
             Scope: Phase 2 cross-platform code review/regressions, complete release notes, docs/dev/reports/phases/2/PHASE-REPORT.md and HANDOFF.
@@ -81,52 +81,60 @@ Each task includes focused test-first behavior checks where meaningful, implemen
             Verification: electron, browser-package, both browser ui and release --version 0.2.0 suites via tools/check.py. Prepare report/notes/HANDOFF and this checkbox in the same commit; tests do not replace code review.
             Transition: coordinator integrates/verifies/publishes the complete phase, then publishes the default-branch 0.2.0 release with both current artifacts and matching downloaded-byte checks before Phase 3 activation.
 
+            Evidence: Phase2 whole-code review Ready with no required defect/TODO; independent review minor host-byte provenance gap resolved. Sixteen scoped model/browser/UI/extracted-package/electron/release test executions passed. Reports/notes/HANDOFF prepared; native Windows exclusions explicit. T007-009 single-task publication/issues confirmed; integration and source-pinned0.2 release remain coordinator transitions.
 ## Phase 3 — Sidebar extensions
 
-- [ ] Phase 3 — Sidebar extensions
-    - [ ] Milestone 3.1 — Paired sidebar integration
-            Evidence: Phase2 whole-code review Ready with no required defect/TODO; independent review minor host-byte provenance gap resolved. Sixteen scoped model/browser/UI/extracted-package/electron/release test executions passed. Reports/notes/HANDOFF prepared; native Windows exclusions explicit. T007-009 single-task publication/issues confirmed; integration and source-pinned0.2 release remain coordinator transitions.
-        - [ ] T-011 — Implement document-owned page state and validated messages
+- [x] Phase 3 — Sidebar extensions
+    - [x] Milestone 3.1 — Paired sidebar integration
+        - [x] T-011 — Implement document-owned page state and validated messages
             Depends on: T-010, Phase 2 published integration/release and Phase 3 activation.
             Scope: src/extensions/protocol.js and page.js, isolated shared message mounting, tests/test_extension_protocol.py and ordinary-page fixtures/probes; version 0.3.0.
             Acceptance: R-04–06 page-side contracts: one isolated noninteractive overlay, red initial state, idempotent activation, validated own-extension messages, wrong-document/invalid inputs unchanged, full/cached navigation teardown and same-document preservation. No persistent storage or page-origin command bridge.
             Verification: python tools/check.py model; python tools/check.py extension-protocol. Exercise real page controller/DOM and modeled extension transport separately; confirm fixture geometry/focus unchanged and cleanup safe.
-        - [ ] T-012 — Implement window-bound sidebar synchronization and failures
+            Evidence: Document-owned session and v1 validation implemented at0.3.0. RED2 intended behavioral failures; GREEN protocol/page3 in Chromium and3 in Firefox plus model2. Real HTML/XHTML DOM confirms isolated centered overlay, unchanged fixture geometry/focus, exclusive sender/nonce validation, idempotency, SPA preservation and cached-exit reset. Runtime transport modeled, native extension evidence deferred. Details T-011 report; phase3 projection issues20-27/milestones7-9 verified before execution.
+        - [x] T-012 — Implement window-bound sidebar synchronization and failures
             Depends on: T-011.
             Scope: src/extensions/sidebar HTML/JS/CSS, controls composition, tests/test_extension_sidebar.py and bounded adapter probes.
             Acceptance: R-05–07 own-window active-tab binding, independent page colors, reopen/probe synchronization, captured-target dispatch, queued latest-choice convergence, stale-reply/nonce rejection, 2-second timeout handling and disabled explanatory status. Narrow sidebar remains accessible.
             Verification: python tools/check.py extension-sidebar. Deterministic delayed/reordered reply, switching, navigation, denied/absent receiver and rapid selection tests exercise the controller through its adapter seam. Label these modeled transport checks, not native browser sidebar evidence.
-        - [ ] T-013 — Integrate Chromium toolbar activation and native side panel
+            Evidence: Window-bound sidebar, acknowledged native radios and 2-second failure recovery implemented. RED missing controls/binding; GREEN sidebar4 Chromium+4 Firefox. Modeled transport exercises own-window isolation, coalescing/captured target, switch/navigation queue cancellation, late probes/replies, stale nonce, malformed reply, timeout with no mutation resend, unavailable/recovery/reopen and pending disposal. Actual200px CSS screenshot inspected. Native API integration remains next tasks; details T-012 report.
+        - [x] T-013 — Integrate Chromium toolbar activation and native side panel
             Depends on: T-011, T-012.
             Scope: src/extensions/activation.js, Chromium manifest/worker/API adapter, extension build entry points and Chromium tests/probes.
             Acceptance: R-04–08 explicit toolbar activation/open timing, frame-zero temporary access, correct minimal permissions and bundled native sidebar/content entries. Sidebar-menu opening does not activate a page. Errors cannot redirect into another tab/window.
             Verification: node tools/build.mjs --platform chromium; python tools/check.py extensions --browser chromium. The intermediate Chromium build command is an internal build interface; final paired package completeness is assessed after T-014. Exercise actual full Chromium where available (including headless full mode); preserve working-shell controller checks and report excluded native behavior under policy.
-        - [ ] T-014 — Integrate Firefox toolbar activation and native sidebar
+            Evidence: Chromium MV3 native boundary and fully bundled entries implemented. RED missing manifest/no toolbar calls; GREEN extensions3, actual built worker under modeled APIs, exact minimal permissions/frame-zero/ISOLATED targeting/own-window event mapping. Full managed headless Chromium launch diagnosed SIGABRT at process-singleton socket EPERM despite existing --no-sandbox; native toolbar/panel checks unavailable/excluded, working shell retained. See T-013 report.
+        - [x] T-014 — Integrate Firefox toolbar activation and native sidebar
             Depends on: T-011, T-012, T-013.
             Scope: Firefox manifest/nonpersistent-background/API adapter, paired extension build selection and Firefox tests/probes.
             Acceptance: same R-04–08 experience through Firefox-native APIs and correct MV3 background form; no forked model/UI/protocol, no permanent host grants or runtime dependencies. Both browsers' build entries are complete.
             Verification: npm run package:extensions; python tools/check.py extensions --browser firefox; regress Chromium adapter/protocol/sidebar suites. Use a compliant isolated Firefox environment, distinguishing available native integration from modeled tests and stating any excluded browser-chrome behavior.
-        - [ ] T-015 — Review, test and report paired sidebar integration
+            Evidence: Paired bundled Chromium ZIP/Firefox XPI created; Firefox MV3 nonpersistent background/sidebar uses shared logic. RED missing Firefox runtime; GREEN extensions4 per browser, actual built content entry/background seams; sidebar4 per browser and browserUI2+2 preserved. Independent P3-01/P3-02 defects reproduced and fixed (runtime namespace, pending acknowledged-radio reselection). web-ext10.8 lint0errors/2minimum-version metadata warnings; native managedFirefox157 temporary installation observed, toolbar/sidebar lifecycle not claimed. See T-014 report.
+        - [x] T-015 — Review, test and report paired sidebar integration
             Depends on: T-011, T-012, T-013, T-014.
             Scope: whole 3.1 code review, cross-adapter interaction/lifecycle/race/error checks and blocker repairs; docs/dev/reports/phases/3/3.1.md and HANDOFF.
             Acceptance: page and sidebar responsibility split is coherent; all feasible R-04–08 evidence passes, no wrong-document mutation or persistence, actual native/modeled/excluded coverage separated. Record TODO dispositions.
             Verification: extension-protocol, extension-sidebar and both browser extensions suites via tools/check.py; inspect native fixtures/screenshots where supported. Commit milestone report/HANDOFF with this checkbox; close the milestone only after all its issues close.
-    - [ ] Milestone 3.2 — Cumulative platform distribution
-        - [ ] T-016 — Assemble all four versioned platform packages
+            Evidence: Whole milestone3.1 code review Ready, no required defect/TODO. Independent P3-01/P3-02 fixes rechecked resolved. Protocol3/sidebar4/extensions4 per browser=22 test executions passed; real bundled entries/DOM under modeled runtime transport. Firefox157 temporary native installation observed; lint0errors/2minimum-version advisories; fullChromium socketEPERM and native sidebar limits explicit. Milestone report/HANDOFF included; packaged matrix remainsT017.
+    - [x] Milestone 3.2 — Cumulative platform distribution
+        - [x] T-016 — Assemble all four versioned platform packages
             Depends on: T-015 and milestone 3.1 completion/closure.
             Scope: final extension ZIP/XPI allowlists and runtime staging, cumulative browser/Windows packages, docs/INSTALL.md, README, checksums/evidence and tests/test_release.py.
             Acceptance: R-08–10 manifest-at-root packages and bundled assets, current 0.3.0 source/version across all four artifacts, complete licenses and no secrets/tests/plugin/caches. Chromium unpacked and Firefox temporary installation limitations and unsigned Windows status are explicit.
             Verification: npm run package:all; python tools/check.py release --version 0.3.0. Extract and inspect every package and local reference, independently recompute checksums, validate completeness and distribution instructions.
-        - [ ] T-017 — Verify packaged lifecycle matrix and preserved platforms
+            Evidence: All four0.3.0 runtime archives and seven canonical release assets assembled. RED missing cumulative browser/Windows packages; GREEN release3 checks actual hashes/CRC/source/version/exclusions/manifest roots/local entries. Explicit development unpacked/temporary/unsigned routes, activation/lifecycle and native/validator limits documented. Narrowly named incomplete workspace-copy residue is not a candidate/upload; every other unexpected output rejected. Details T-016 report; packaged interaction matrix remainsT017.
+        - [x] T-017 — Verify packaged lifecycle matrix and preserved platforms
             Depends on: T-016.
             Scope: tests/test_extensions.py/package fixtures, missing integration coverage and package evidence; cumulative browser/desktop regressions and installation checks where available.
             Acceptance: actual extracted package paths used for feasible native extension scenarios: two tabs/windows, reopen, background suspension, full/cached/SPA navigation, unsupported page, stale/invalid messages and timeout recovery; no application-tab substitute. Earlier platform behavior and package integrity remain satisfied. Unavailable native/full-browser checks explicitly excluded after diagnosis, with remaining feasible checks passed.
             Verification: both browser extensions suites, extension-protocol/sidebar, browser-package, electron and release --version 0.3.0 suites via tools/check.py. Inspect screenshots/computed state and actual archive evidence; separate modeled from native coverage.
             Milestone exit: whole 3.2 package/test/documentation review and blocker repair; commit docs/dev/reports/phases/3/3.2.md, TODO dispositions and refreshed HANDOFF with this result/checkbox.
-    - [ ] Milestone 3.3 — Phase review
-        - [ ] T-018 — Review, test and report complete platform delivery
+            Evidence: Actual extracted Chrome/Firefox bundles cooperate across real DOMs under modeled native broker; color stays in page controllers. extensions5 each +protocol3 each +sidebar4 each +browser-package3 +electron5 +release3=35 passing executions. Lifecycle/race/timeout/nonce/window matrix and screenshots inspected; extractedFirefox native temporary loading observed, lint0errors/2advisories. Whole3.2 package/test/doc review Ready, no required TODO. Native chrome/BFCache/worker/Windows limits explicit; report/HANDOFF included.
+    - [x] Milestone 3.3 — Phase review
+        - [x] T-018 — Review, test and report complete platform delivery
             Depends on: T-015, T-017 and milestones 3.1/3.2 completion/closure.
             Scope: full Phase 3 and preserved-platform code review/regressions, complete release notes, docs/dev/reports/phases/3/PHASE-REPORT.md, docs/dev/reports/IMPLEMENTATION-REPORT.md and HANDOFF.
             Acceptance: complete R-01–11 coverage with no unresolved required defect; all platform artifacts/source/version agree; task persistence verified. Aggregate all remaining eligible milestone/phase TODOs with provenance, options, impact and owner, or None. State exact native/browser-mode limits without claiming unobserved compatibility.
             Verification: all applicable tools/check.py suites and both usable browsers, including release --version 0.3.0. Persist reports/notes/HANDOFF and this checkbox together; no code-review substitution by test results.
             Transition: coordinator explicitly integrates/verifies/publishes the complete phase, finalizes default-branch release commit/tag, publishes all four artifacts and shared documents, verifies downloaded hashes and reports final hosted state. Stop after the authorized complete release outcome.
+            Evidence: Full phase/project review Ready, no required defect or eligible TODO. Final all12 applicable suite invocations passed41 executions; actual four-platform artifacts, packaged broker matrix, source/version/hash/CRC/exclusion and preserved browser/desktop checks satisfied. Independent findings repaired/rechecked. Reports/notes/HANDOFF included; native Windows/sidebar/cache/worker/API-floor limits and Firefox validator2advisories explicit. T001-017 published/closed, prior milestonesclosed. Final integration, clean-source0.3 tag/release and seven downloaded-asset checks remain coordinator transitions.

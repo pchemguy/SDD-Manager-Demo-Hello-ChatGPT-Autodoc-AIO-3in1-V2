@@ -4,9 +4,9 @@ import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { packager } from '@electron/packager';
-import { buildBrowser, buildElectronInput } from './build.mjs';
+import { buildBrowser, buildElectronInput, buildExtension } from './build.mjs';
 const platform = process.argv[process.argv.indexOf('--platform') + 1];
-if (!['browser', 'electron', 'all'].includes(platform)) throw new Error('Unsupported package platform: ' + platform);
+if (!['browser', 'electron', 'extensions', 'all'].includes(platform)) throw new Error('Unsupported package platform: ' + platform);
 const { version } = JSON.parse(await fs.readFile('package.json', 'utf8'));
 const directory = `dist/${version}`;
 await fs.rm(directory, { recursive: true, force: true });
@@ -32,6 +32,15 @@ if (platform === 'electron' || platform === 'all') {
   const name = `hello-world-${version}-win32-x64.zip`;
   execFileSync('python', ['tools/archive.py', runtime, `${directory}/${name}`], { stdio: 'inherit' });
   names.push(name);
+}
+if (platform === 'extensions' || platform === 'all') {
+  if (platform === 'extensions') await buildBrowser();
+  for (const target of ['chromium', 'firefox']) {
+    await buildExtension(target);
+    const name = `hello-world-${version}-${target}.${target === 'firefox' ? 'xpi' : 'zip'}`;
+    execFileSync('python', ['tools/archive.py', `build/extensions/${target}`, `${directory}/${name}`, 'manifest.json', 'background.js', 'page.js', 'sidebar.js', 'sidebar.html', 'sidebar.css', 'build-info.json', 'LICENSE'], { stdio: 'inherit' });
+    names.push(name);
+  }
 }
 await fs.copyFile('docs/INSTALL.md', `${directory}/INSTALL.md`);
 const record = JSON.parse(await fs.readFile('build/browser/build-info.json', 'utf8'));
