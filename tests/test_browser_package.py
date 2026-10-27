@@ -8,7 +8,8 @@ ROOT = Path(__file__).resolve().parents[1]
 
 @pytest.fixture(scope='module')
 def package_file():
-    return ROOT / 'dist/0.1.0/hello-world-0.1.0-browser.zip'
+    version = json.loads((ROOT / 'package.json').read_text())['version']
+    return ROOT / 'dist' / version / f'hello-world-{version}-browser.zip'
 
 def test_browser_archive_runtime_allowlist(package_file):
     with zipfile.ZipFile(package_file) as archive:

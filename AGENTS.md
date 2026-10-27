@@ -52,7 +52,7 @@ Maintain project-specific navigation and validated setup/check commands here as 
 
 ## Current project navigation
 
-The [PROJECT brief](docs/dev/PROJECT.md) describes the accepted Hello World application. [DOCS_TASKS](docs/dev/DOCS_TASKS.md) owns preparation checkboxes and [DOCS_PREPARATION](docs/dev/DOCS_PREPARATION.md) owns decisions, approvals and QC evidence. Recover later state through [HANDOFF](docs/dev/HANDOFF.md) and Git before continuing. No product build or test commands are established yet.
+The [PROJECT brief](docs/dev/PROJECT.md) describes the accepted Hello World application. [DOCS_TASKS](docs/dev/DOCS_TASKS.md) owns preparation checkboxes and [DOCS_PREPARATION](docs/dev/DOCS_PREPARATION.md) owns decisions, approvals and QC evidence. Recover later state through [HANDOFF](docs/dev/HANDOFF.md) and Git before continuing. Validated browser build/check commands are listed below; future-platform commands remain planned.
 
 ## Design and implementation locations
 
@@ -61,3 +61,7 @@ The intended system is defined by [ARCHITECTURE](docs/dev/ARCHITECTURE.md), [DEC
 ## Task ownership
 
 [TASKS](docs/dev/TASKS.md) owns the 18 planned implementation tasks and their phase/milestone hierarchy. [TASKS review](docs/dev/TASKS-REVIEW-REPORT.md) records scoped derivation readiness; whole-package QC and published preparation integration are separate prerequisites. Planned setup/build/check commands in layout are not validated until their implementation tasks run.
+
+## Validated browser commands
+
+The browser phase implements npm ci, npm run build:browser, npm run package:browser and npm run package:all. Pytest suites model, ui (--browser chromium or firefox), browser-package and release (--version 0.1.0) are validated through python tools/check.py. Install Python dependencies into .tools/python from requirements-dev.txt; browser binaries remain under the absolute project .tools/browsers path. The diagnosed Firefox process-local override and official OCI Chromium provenance are in reports/phases/1/T-001.md; do not apply those environment settings to untrusted external browsing. Packaging future platforms remains gated by their tasks.

@@ -11,6 +11,12 @@ def test_exact_message_radio_colors_and_session_lifecycle(probe, browser_name):
     assert result['fresh'] == 'red'
     assert result['reloaded'] == 'red'
     assert result['disposedChildren'] == 0
+    assert [s['checked'] for s in result['independence']] == [['green', 'red'], ['green', 'blue'], ['red', 'blue']]
+    assert [s['colors'] for s in result['independence']] == [
+        ['rgb(0, 128, 0)', 'rgb(255, 0, 0)'],
+        ['rgb(0, 128, 0)', 'rgb(0, 0, 255)'],
+        ['rgb(255, 0, 0)', 'rgb(0, 0, 255)'],
+    ]
 
 def test_responsive_geometry_keyboard_focus_and_css_zoom(probe, browser_name):
     data = probe('layout', browser_name)

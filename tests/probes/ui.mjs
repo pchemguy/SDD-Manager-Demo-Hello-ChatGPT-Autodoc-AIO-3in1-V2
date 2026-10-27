@@ -22,6 +22,13 @@ try {
     await page.getByRole('radio', { name: 'green', exact: true }).check();
     const freshPage = await context.newPage(); await freshPage.goto(site.url);
     const fresh = await freshPage.locator('input:checked').inputValue();
+    const snapshot = async () => ({
+      checked: [await page.locator('input:checked').inputValue(), await freshPage.locator('input:checked').inputValue()],
+      colors: [await message.evaluate(e => getComputedStyle(e).color), await freshPage.locator('[data-hello-message]').evaluate(e => getComputedStyle(e).color)]
+    });
+    const independence = [await snapshot()];
+    await freshPage.getByRole('radio', { name: 'blue', exact: true }).check(); independence.push(await snapshot());
+    await page.getByRole('radio', { name: 'red', exact: true }).check(); independence.push(await snapshot());
     const checkedCount = await page.locator('input:checked').count();
     const disposedChildren = await page.evaluate(async () => {
       const { mountApplication } = await import('/app.js');
@@ -29,7 +36,7 @@ try {
       const view = mountApplication(root); view.dispose(); return root.childElementCount;
     });
     await page.reload();
-    finish({ messageCount: count, text: await message.textContent(), labels, initial, transitions, checkedCount, fresh, disposedChildren, reloaded: await page.locator('input:checked').inputValue() });
+    finish({ messageCount: count, text: await message.textContent(), labels, initial, transitions, checkedCount, fresh, independence, disposedChildren, reloaded: await page.locator('input:checked').inputValue() });
     await context.close();
   }
 } finally { await browser.close(); done(); await site.close(); }

@@ -1,17 +1,23 @@
 # Hello World
 
-A planned Hello World color-selector app for the browser, Windows Electron, and Chromium/Firefox sidebars.
+Hello World with three vertically stacked radio buttons: red, blue and green. Selecting a color updates the message immediately. Each session starts red; selections are not saved.
 
-The accepted [project brief](docs/dev/PROJECT.md), [architecture](docs/dev/ARCHITECTURE.md), [specification](docs/dev/SPEC.md), [delivery plan](docs/dev/PLAN.md) and [implementation tasks](docs/dev/TASKS.md) define the intended product. Document preparation has reached TASKS; whole-package QC and implementation remain pending. The browser experience is implemented and tested in isolated Chromium and Firefox. Deployable packages and releases are pending.
+## Browser app
 
-Development uses [SDD Manager](SDD-MANAGER.md). See the [AI-assisted development disclosure](AI_DISCLOSURE.md).
+The browser application is implemented and tested in isolated Chromium and Firefox. The main message stays centered independently of the settings panel in wide windows; narrow windows stack both panels. Keyboard arrows/Space and visible focus are supported.
+
+Run npm ci and npm run package:all to create the current browser deployment candidate under dist/0.1.0. Extract its browser ZIP and deploy all files together to a static HTTP/HTTPS host. See [installation instructions](docs/INSTALL.md) and [verification scope](docs/VERIFICATION.md). Published release availability is reported separately; no release is claimed from local candidate generation.
+
+Windows Electron and paired Chromium/Firefox sidebar extensions are the planned next platform groups. Their runtime packages are not delivered by the browser phase.
 
 ## Development setup
 
-Use Node.js 22+ and Python 3.11+ with npm ci and python -m pip install --target .tools/python -r requirements-dev.txt. Set PLAYWRIGHT_BROWSERS_PATH to the absolute .tools/browsers directory and use the pinned local Playwright CLI to install the selected managed browsers. [Environment evidence](docs/dev/reports/phases/1/T-001.md) records this host's download recovery and scoped Firefox override.
+Use Node.js 22+ and Python 3.11+. Run npm ci and python -m pip install --target .tools/python -r requirements-dev.txt. Set PLAYWRIGHT_BROWSERS_PATH to the absolute .tools/browsers directory when installing the pinned runner's managed browsers. [Provisioning evidence](docs/dev/reports/phases/1/T-001.md) records this host's official-download recovery and scoped Firefox override.
 
-Run python tools/check.py environment --browser chromium and the corresponding firefox command. Other suites and build/package commands become available through the implementation tasks; missing suites fail rather than claim a pass.
+The Python dispatcher uses the dedicated dependency/browser locations. Validated commands include python tools/check.py model, python tools/check.py ui --browser chromium, the corresponding firefox UI command, python tools/check.py browser-package and python tools/check.py release --version 0.1.0. Native/other-platform suites become available with their implementation tasks; absent suites fail explicitly.
 
-## Browser development build
+## Project documents
 
-Run npm run build:browser or npm run package:browser. The generated build/browser directory contains the static runtime; the versioned browser ZIP under dist can be extracted and served at a static-host subpath. Development build metadata is explicitly marked when source changes are uncommitted. Release instructions and published packages are finalized separately.
+The accepted [brief](docs/dev/PROJECT.md), [architecture](docs/dev/ARCHITECTURE.md), [specification](docs/dev/SPEC.md), [plan](docs/dev/PLAN.md) and [tasks](docs/dev/TASKS.md) define the complete intended product. Whole-package documentation QC passed before implementation. Current progress and pending effects are recoverable through [HANDOFF](docs/dev/HANDOFF.md).
+
+Development uses [SDD Manager](SDD-MANAGER.md). See the [AI-assisted development disclosure](AI_DISCLOSURE.md).

@@ -1,6 +1,6 @@
 # Project handoff
 
-Checkpoint: Phase 1 milestone 1.1 usable browser verified; T-003 prepared for publication.
+Checkpoint: Phase 1 milestone 1.2 browser distribution verified; T-005 prepared for publication.
 Recover subsequent publication and hosted effects from Git and the linked records; this snapshot cannot prove its own later push or issue closure.
 
 Outcome: accepted PROJECT and autodoc-preapproved ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout and TASKS prepared; scoped SPEC, PLAN/layout and TASKS reviews support their respective downstream gates. TASKS defines 18 unchecked implementation tasks across the three requested platform phases. No product implementation or whole-package QC performed.
@@ -54,3 +54,7 @@ T-001 establishes isolated tooling and two-cycle Chromium shell/Firefox capabili
 ## Milestone 1.1 checkpoint
 
 T-001 and T-002 are committed/published with completed issue closures. T-003 completes responsive/accessibility behavior and the folded whole-milestone review; reports/phases/1/1.1.md records actual checks and limits. Local milestone 1.1 is complete; T-003 publication and issue 12/milestone 2 closures remain pending until read back. Next eligible task is T-004 after those effects. Phase 1 remains incomplete and unmerged; selected range still continues through T-018 and three releases.
+
+## Milestone 1.2 checkpoint
+
+T-004 browser archive result is committed/published and issue 13 closed. T-005 completes installation/evidence/checksums and folded milestone review, including resolved BR-01/BR-02 verification gaps; see reports/phases/1/1.2.md. Publish/read back T-005, close issue 14 and milestone 3, then run T-006. Earlier milestone 2 is closed/read back. Phase 1 remains unmerged and release 0.1.0 unpublished. Full range and later platform releases remain authorized.
