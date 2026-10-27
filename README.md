@@ -25,3 +25,5 @@ The accepted [brief](docs/dev/PROJECT.md), [architecture](docs/dev/ARCHITECTURE.
 Development uses [SDD Manager](SDD-MANAGER.md). See the [AI-assisted development disclosure](AI_DISCLOSURE.md).
 
 Latest delivered release at this checkpoint: [v0.1.0](https://github.com/pchemguy/SDD-Manager-Demo-Hello-ChatGPT-Autodoc-AIO-3in1-V2/releases/tag/v0.1.0). All listed release assets were downloaded and checksum-verified through the release-asset API.
+
+Latest delivered release at this checkpoint: [v0.2.0](https://github.com/pchemguy/SDD-Manager-Demo-Hello-ChatGPT-Autodoc-AIO-3in1-V2/releases/tag/v0.2.0). All listed release assets were downloaded and checksum-verified through the release-asset API.

@@ -1,6 +1,6 @@
 # Project handoff
 
-Checkpoint: Phase 2 review Ready; T-010 publication/closure, integration and release pending.
+Checkpoint: Phase 2 complete, integrated and release v0.2.0 published/download-verified.
 
 ## Workflow and authority
 
@@ -30,3 +30,7 @@ T-007–009 are published and issues closed; milestone 2.1 closure is reconciled
 ## Phase 2 integration checkpoint
 
 Complete source 171b60cd4d8c0e325126fc8afa6c3686aba2b705 from phase/2-windows-electron is integrating into main at 5f182884c29f9509d740656077cf0324681822e4. All selected task closing boundaries audited; task/review milestone closures verified. Prospective production/tool/test bytes match the verified phase source. Target publication and the cumulative release remain pending until read back. The authorized complete range continues through T-018; next phase requires the current release outcome.
+
+## Observed v0.2.0 completion
+
+Release https://github.com/pchemguy/SDD-Manager-Demo-Hello-ChatGPT-Autodoc-AIO-3in1-V2/releases/tag/v0.2.0 at source 38a0404e8f376ffeae28b4c4492f010c0cda831f has complete expected assets and matching downloaded API bytes; published body equals retained notes and latest readback matches. No publication effect remains pending for this phase. Working branch main now records the completed outcome. Next: activate Phase 3 only, then continue the authorized remaining task range and cumulative releases.
