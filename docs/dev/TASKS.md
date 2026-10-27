@@ -84,7 +84,7 @@ Each task includes focused test-first behavior checks where meaningful, implemen
 ## Phase 3 — Sidebar extensions
 
 - [ ] Phase 3 — Sidebar extensions
-    - [ ] Milestone 3.1 — Paired sidebar integration
+    - [x] Milestone 3.1 — Paired sidebar integration
             Evidence: Phase2 whole-code review Ready with no required defect/TODO; independent review minor host-byte provenance gap resolved. Sixteen scoped model/browser/UI/extracted-package/electron/release test executions passed. Reports/notes/HANDOFF prepared; native Windows exclusions explicit. T007-009 single-task publication/issues confirmed; integration and source-pinned0.2 release remain coordinator transitions.
         - [x] T-011 — Implement document-owned page state and validated messages
             Depends on: T-010, Phase 2 published integration/release and Phase 3 activation.
@@ -110,11 +110,12 @@ Each task includes focused test-first behavior checks where meaningful, implemen
             Acceptance: same R-04–08 experience through Firefox-native APIs and correct MV3 background form; no forked model/UI/protocol, no permanent host grants or runtime dependencies. Both browsers' build entries are complete.
             Verification: npm run package:extensions; python tools/check.py extensions --browser firefox; regress Chromium adapter/protocol/sidebar suites. Use a compliant isolated Firefox environment, distinguishing available native integration from modeled tests and stating any excluded browser-chrome behavior.
             Evidence: Paired bundled Chromium ZIP/Firefox XPI created; Firefox MV3 nonpersistent background/sidebar uses shared logic. RED missing Firefox runtime; GREEN extensions4 per browser, actual built content entry/background seams; sidebar4 per browser and browserUI2+2 preserved. Independent P3-01/P3-02 defects reproduced and fixed (runtime namespace, pending acknowledged-radio reselection). web-ext10.8 lint0errors/2minimum-version metadata warnings; native managedFirefox157 temporary installation observed, toolbar/sidebar lifecycle not claimed. See T-014 report.
-        - [ ] T-015 — Review, test and report paired sidebar integration
+        - [x] T-015 — Review, test and report paired sidebar integration
             Depends on: T-011, T-012, T-013, T-014.
             Scope: whole 3.1 code review, cross-adapter interaction/lifecycle/race/error checks and blocker repairs; docs/dev/reports/phases/3/3.1.md and HANDOFF.
             Acceptance: page and sidebar responsibility split is coherent; all feasible R-04–08 evidence passes, no wrong-document mutation or persistence, actual native/modeled/excluded coverage separated. Record TODO dispositions.
             Verification: extension-protocol, extension-sidebar and both browser extensions suites via tools/check.py; inspect native fixtures/screenshots where supported. Commit milestone report/HANDOFF with this checkbox; close the milestone only after all its issues close.
+            Evidence: Whole milestone3.1 code review Ready, no required defect/TODO. Independent P3-01/P3-02 fixes rechecked resolved. Protocol3/sidebar4/extensions4 per browser=22 test executions passed; real bundled entries/DOM under modeled runtime transport. Firefox157 temporary native installation observed; lint0errors/2minimum-version advisories; fullChromium socketEPERM and native sidebar limits explicit. Milestone report/HANDOFF included; packaged matrix remainsT017.
     - [ ] Milestone 3.2 — Cumulative platform distribution
         - [ ] T-016 — Assemble all four versioned platform packages
             Depends on: T-015 and milestone 3.1 completion/closure.
