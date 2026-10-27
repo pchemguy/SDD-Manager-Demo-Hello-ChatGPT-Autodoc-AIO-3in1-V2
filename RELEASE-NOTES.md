@@ -1,22 +1,24 @@
-# Hello World 0.1.0
+# Hello World 0.2.0
 
-The first platform delivery is a deployable browser app.
+Adds an unsigned portable Windows x64 Electron app and preserves the browser app.
 
 ## Changes
 
-- Display Hello World with native red, blue and green radio buttons; red is initially selected and changes apply immediately.
-- Keep the message centered independently of the right settings panel in wide windows; stack panels in narrow windows with keyboard access and visible focus.
-- Keep each page session independent and reset to red on reload.
-- Ship a relocatable static browser ZIP with local assets, license, source/version metadata, installation instructions and SHA-256 checksums.
+- Run the same session-only Hello World UI locally in a constrained Electron window, with immediate red/blue/green selection and responsive layout.
+- Bundle Electron 45.0.0, native libraries, locales, notices and renderer assets; users need no separate Node.js installation or development server.
+- Deny renderer Node integration, unexpected navigation, popups and permissions; close the window to quit.
+- Rebuild both browser and Windows packages at version 0.2.0 from the same release source, with installation instructions, evidence and SHA-256 checksums.
 
 ## Install
 
-Download hello-world-0.1.0-browser.zip, extract it and deploy all files together to a static HTTP/HTTPS host. Users need no Node.js, backend or development server. INSTALL.md and VERIFICATION.md accompany the archive; verify SHA256SUMS against the downloaded bytes.
+For Windows, extract the complete hello-world-0.2.0-win32-x64.zip and run HelloWorld.exe. This is an unsigned development portable package, not a signed installer or store distribution; Windows may show an unknown-publisher warning. Windows 10/11 x64 is the upstream runtime target.
+
+For the browser, deploy all files from hello-world-0.2.0-browser.zip together to a static HTTP/HTTPS host. Both packages run without a backend. Read INSTALL.md and VERIFICATION.md and compare SHA256SUMS against the downloaded bytes.
 
 ## Verification and limits
 
-The browser phase passed 11 test executions across the model, Chromium/Firefox UI, extracted-package and clean-candidate release suites. Screenshots were inspected; repeated same-input candidate builds produced identical bytes. Independent code review found no blocking product defect; two minor verification gaps were resolved.
+Sixteen test executions passed across the shared model, Chromium/Firefox UI, extracted browser package, Electron modeled-host/actual-package and cumulative release suites. Independent source review found no blocking defect; a minor packaged-host provenance gap was fixed. Actual archive checks cover AMD64 PE, local renderer/host bytes, CRC, matching metadata and preservation of upstream runtime resources/licenses.
 
-Tests used managed Chromium headless shell 156.0.8078.4 and Firefox 157.0 through Playwright 1.64.1 on Ubuntu 24.04 x64. Firefox needed a diagnosed process-local content-sandbox override for controlled local tests. Native browser-toolbar zoom and OS-window focus were not tested; CSS zoom, viewport geometry and headless native keyboard interaction were exercised.
+Build host: Ubuntu 24.04 x64, Node 24.22.1; @electron/packager 20.3.0. Managed Chromium headless shell 156.0.8078.4 and Firefox 157.0 run via Playwright 1.64.1. Firefox uses a diagnosed process-local sandbox override only for trusted local tests.
 
-This release contains the browser platform only. Windows Electron and Chromium/Firefox sidebar extensions belong to subsequent deliveries. No native Windows or sidebar compatibility is claimed here.
+Native Windows launch, Windows Explorer extraction, SmartScreen/signature presentation and actual Electron security enforcement were unavailable and remain unverified. Modeled host checks are not native Windows execution. Browser-toolbar zoom and OS-window focus remain untested. Sidebar extensions are delivered in the next phase.
