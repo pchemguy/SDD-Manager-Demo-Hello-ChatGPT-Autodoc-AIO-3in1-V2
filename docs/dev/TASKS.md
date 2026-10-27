@@ -84,7 +84,7 @@ Each task includes focused test-first behavior checks where meaningful, implemen
             Evidence: Phase2 whole-code review Ready with no required defect/TODO; independent review minor host-byte provenance gap resolved. Sixteen scoped model/browser/UI/extracted-package/electron/release test executions passed. Reports/notes/HANDOFF prepared; native Windows exclusions explicit. T007-009 single-task publication/issues confirmed; integration and source-pinned0.2 release remain coordinator transitions.
 ## Phase 3 — Sidebar extensions
 
-- [ ] Phase 3 — Sidebar extensions
+- [x] Phase 3 — Sidebar extensions
     - [x] Milestone 3.1 — Paired sidebar integration
         - [x] T-011 — Implement document-owned page state and validated messages
             Depends on: T-010, Phase 2 published integration/release and Phase 3 activation.
@@ -130,10 +130,11 @@ Each task includes focused test-first behavior checks where meaningful, implemen
             Verification: both browser extensions suites, extension-protocol/sidebar, browser-package, electron and release --version 0.3.0 suites via tools/check.py. Inspect screenshots/computed state and actual archive evidence; separate modeled from native coverage.
             Milestone exit: whole 3.2 package/test/documentation review and blocker repair; commit docs/dev/reports/phases/3/3.2.md, TODO dispositions and refreshed HANDOFF with this result/checkbox.
             Evidence: Actual extracted Chrome/Firefox bundles cooperate across real DOMs under modeled native broker; color stays in page controllers. extensions5 each +protocol3 each +sidebar4 each +browser-package3 +electron5 +release3=35 passing executions. Lifecycle/race/timeout/nonce/window matrix and screenshots inspected; extractedFirefox native temporary loading observed, lint0errors/2advisories. Whole3.2 package/test/doc review Ready, no required TODO. Native chrome/BFCache/worker/Windows limits explicit; report/HANDOFF included.
-    - [ ] Milestone 3.3 — Phase review
-        - [ ] T-018 — Review, test and report complete platform delivery
+    - [x] Milestone 3.3 — Phase review
+        - [x] T-018 — Review, test and report complete platform delivery
             Depends on: T-015, T-017 and milestones 3.1/3.2 completion/closure.
             Scope: full Phase 3 and preserved-platform code review/regressions, complete release notes, docs/dev/reports/phases/3/PHASE-REPORT.md, docs/dev/reports/IMPLEMENTATION-REPORT.md and HANDOFF.
             Acceptance: complete R-01–11 coverage with no unresolved required defect; all platform artifacts/source/version agree; task persistence verified. Aggregate all remaining eligible milestone/phase TODOs with provenance, options, impact and owner, or None. State exact native/browser-mode limits without claiming unobserved compatibility.
             Verification: all applicable tools/check.py suites and both usable browsers, including release --version 0.3.0. Persist reports/notes/HANDOFF and this checkbox together; no code-review substitution by test results.
             Transition: coordinator explicitly integrates/verifies/publishes the complete phase, finalizes default-branch release commit/tag, publishes all four artifacts and shared documents, verifies downloaded hashes and reports final hosted state. Stop after the authorized complete release outcome.
+            Evidence: Full phase/project review Ready, no required defect or eligible TODO. Final all12 applicable suite invocations passed41 executions; actual four-platform artifacts, packaged broker matrix, source/version/hash/CRC/exclusion and preserved browser/desktop checks satisfied. Independent findings repaired/rechecked. Reports/notes/HANDOFF included; native Windows/sidebar/cache/worker/API-floor limits and Firefox validator2advisories explicit. T001-017 published/closed, prior milestonesclosed. Final integration, clean-source0.3 tag/release and seven downloaded-asset checks remain coordinator transitions.

@@ -1,6 +1,6 @@
 # Project handoff
 
-Checkpoint: Phase 3 milestone 3.2 review Ready; T-017 publication/closure pending.
+Checkpoint: Phase 3 and complete implementation review Ready; T-018 publication/closure, main integration and final release pending.
 
 ## Workflow and authority
 
@@ -26,3 +26,7 @@ After milestone7 closure, complete T-016 all four packages/instructions/evidence
 ## Current cumulative delivery checkpoint
 
 Milestone7/3.1 is closed/read back. T-016 seven canonical0.3 assets are built/verified and issue25 closed. T-017 [milestone3.2](reports/phases/3/3.2.md) records35 passing test executions including actual extracted packages/broker matrix, preserved browser/desktop artifacts, screenshots and native/validator limits. No required defect/TODO. T-017 publication/issue26 and milestone8 closure follow this snapshot. Then T-018 finishes phase/final review, all applicable regression evidence and notes; integrate/publish main and final v0.3.0 with downloaded-byte verification.
+
+## Final review checkpoint
+
+Milestones7/8 are closed/read back; T-001–017 published/closed. All12 applicable suite invocations passed41 executions at reviewed source3ca07f7680e4a29ffc092b9552b0e6a19c794738. Independent review required findings resolved; no remaining eligible TODO. [Phase3 report](reports/phases/3/PHASE-REPORT.md), [final report](reports/IMPLEMENTATION-REPORT.md) and retained RELEASE-NOTES.md cover delivery, exact platform development routes, native exclusions and validator advisories. T-018 result publication/issue27 and milestone9 closure follow; then explicitly integrate/publish main, rebuild clean release source, publish/tag v0.3.0 with all seven canonical assets and verify exact body/downloaded hashes. Stop after observed final publication; no further task range selected.

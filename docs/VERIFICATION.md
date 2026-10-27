@@ -1,3 +1,7 @@
+## Final verification campaign
+
+All 12 applicable suite invocations passed, totaling 41 test executions: model 2, browser UI 2 per engine, extracted browser-package 3, Electron 5, extension protocol 3/sidebar 4/extracted bundles 5 per engine, release 3. The phase report identifies the reviewed source/candidate and independent review outcomes. Clean-source release checks and published downloaded-byte verification follow this implementation campaign.
+
 ## Performed implementation checks
 
 Shared model and browser UI checks cover exact text/colors/native radios, immediate updates, independent sessions/reload, disposal, keyboard/focus, viewport centering independent of settings width, narrow/short windows, breakpoint and CSS zoom. Extracted nested-path browser deployment passes in managed Chromium headless shell156.0.8078.4 and Firefox 157.0 via Playwright 1.64.1. Screenshots were inspected. Firefox requires a diagnosed process-local content-sandbox override for trusted local checks after uid_map EPERM. Chromium binaries came from the digest-verified matching official Playwright image after a CDN returned HTML; see repository Phase1 evidence. No personal profiles are used.
