@@ -7,7 +7,7 @@ Each task includes focused test-first behavior checks where meaningful, implemen
 ## Phase 1 — Browser app
 
 - [ ] Phase 1 — Browser app
-    - [ ] Milestone 1.1 — Usable browser experience
+    - [x] Milestone 1.1 — Usable browser experience
         - [x] T-001 — Establish isolated tooling and representative browser execution
             Depends on: none, after accepted preparation integration and Phase 1 tracking activation.
             Scope: package/lockfiles, contained pytest support requirements, tools/check.py dispatcher, tests/test_environment.py and bounded Node probes; ignore owned generated paths. Establish version 0.1.0 and planned command interfaces, selecting pinned supported dependency versions without implementing future platform runtime.
@@ -20,13 +20,14 @@ Each task includes focused test-first behavior checks where meaningful, implemen
             Acceptance: R-01 and R-03 core behavior; exact text, initial red, ordered native radio group, all immediate colors and exclusive selection; invalid model input unchanged; independent memory state and reload reset. Shared modules contain no platform APIs or persistence.
             Verification: npm run build:browser; python tools/check.py model; python tools/check.py ui --browser chromium; python tools/check.py ui --browser firefox. Exercise real rendered interaction and DOM/component disposal; document module interfaces and actual limitations.
             Evidence: Implemented the pure red/blue/green model, reusable DOM message/radio controls, document-local composition and initial production browser build. RED: model suite failed two behavioral expectations against the public seam; built-UI suite failed messageCount 0 versus 1. GREEN: model 2 passed; built UI 1 passed in each Chromium and Firefox, including exact text/labels/colors, exclusivity, independent page state, reload reset and component disposal. Build and ASCII checks passed. Responsive layout is T-003 scope; no package/native-platform acceptance claimed.
-        - [ ] T-003 — Complete responsive and accessible browser behavior
+        - [x] T-003 — Complete responsive and accessible browser behavior
             Depends on: T-001, T-002.
             Scope: src/ui/app.css and composition styling, tests/test_ui.py and screenshots/probes; concise browser usage guidance.
             Acceptance: R-02 at wide/narrow/short viewports and 200% zoom; independently centered main panel, right settings, narrow stacking, no overlap/clipping; native keyboard/labels and visible focus. Browser R-01–03 remain satisfied.
             Verification: python tools/check.py ui --browser chromium; python tools/check.py ui --browser firefox. Inspect screenshots and numeric geometry/color assertions, not text alone.
             Milestone exit: review all 1.1 code, rerun applicable browser/model checks, fix blockers, retain actual environment versus product evidence and report limits. Commit milestone report docs/dev/reports/phases/1/1.1.md and refreshed HANDOFF with this result/checkbox. Report TODOs as None or justified eligible findings.
     - [ ] Milestone 1.2 — Deployable browser package
+            Evidence: Completed responsive browser layout and native keyboard/focus accessibility. RED: geometry gap -1264 before CSS; GREEN: final built UI suite 2 passed in each Chromium and Firefox, model regression 2 passed. Main center stays 640 at width 1280 despite settings-width changes; right gap24; 768/767 breakpoint, 320px stack, short-window access and CSS200% zoom pass. Screenshots inspected. Whole milestone1.1 code reviewed separately; no blocker/TODO. Report docs/dev/reports/phases/1/1.1.md and HANDOFF included. CSS-zoom/headless evidence is not native browser-chrome or OS-focus verification.
         - [ ] T-004 — Build and verify a relocatable browser distribution
             Depends on: T-003 and milestone 1.1 completion/closure.
             Scope: tools/build.mjs, browser staging, tools/package.mjs browser allowlist/archive/licenses, tests/test_browser_package.py.

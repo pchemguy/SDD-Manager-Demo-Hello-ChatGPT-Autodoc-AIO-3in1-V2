@@ -11,3 +11,19 @@ def test_exact_message_radio_colors_and_session_lifecycle(probe, browser_name):
     assert result['fresh'] == 'red'
     assert result['reloaded'] == 'red'
     assert result['disposedChildren'] == 0
+
+def test_responsive_geometry_keyboard_focus_and_css_zoom(probe, browser_name):
+    data = probe('layout', browser_name)
+    assert abs(data['wide']['center'] - 640) <= 2
+    assert data['wide']['gap'] >= 16
+    assert data['wide']['font'] >= 32
+    assert abs(data['resizedSettingsCenter'] - 640) <= 2
+    assert data['narrow']['mainBottom'] <= data['narrow']['settingsTop']
+    assert data['narrow']['overflow'] is False
+    assert data['zoom']['overflow'] is False
+    assert data['shortAccessible'] is True
+    assert data['keyboardColor'] == 'green'
+    assert data['visibleFocus'] is True
+    assert abs(data['breakpointWide']['center'] - 384) <= 2
+    assert data['breakpointWide']['gap'] >= 16
+    assert data['breakpointNarrow']['mainBottom'] <= data['breakpointNarrow']['settingsTop']
