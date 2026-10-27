@@ -6,7 +6,7 @@ Each task includes focused test-first behavior checks where meaningful, implemen
 
 ## Phase 1 — Browser app
 
-- [ ] Phase 1 — Browser app
+- [x] Phase 1 — Browser app
     - [x] Milestone 1.1 — Usable browser experience
         - [x] T-001 — Establish isolated tooling and representative browser execution
             Depends on: none, after accepted preparation integration and Phase 1 tracking activation.
@@ -40,9 +40,9 @@ Each task includes focused test-first behavior checks where meaningful, implemen
             Acceptance: release-ready 0.1.0 browser ZIP, INSTALL.md, VERIFICATION.md and SHA256SUMS agree with pinned source/version; installation and performed/excluded checks are truthful. Package documentation contains no future-platform delivery claim.
             Verification: npm run package:all; python tools/check.py release --version 0.1.0. Recompute hashes and inspect actual output; publication download checks occur after integration in the release transition.
             Milestone exit: whole 1.2 code/package review, extracted-package regressions and blocker repair; commit docs/dev/reports/phases/1/1.2.md, TODO dispositions and HANDOFF with this result/checkbox.
-    - [ ] Milestone 1.3 — Phase review
+    - [x] Milestone 1.3 — Phase review
             Evidence: Completed browser install/verification records, cumulative package:all and exact SHA256SUMS. RED: release inventory failed for three missing companion documents; GREEN: release 2 passed, browser-package 3 passed, strengthened UI 2 passed per browser. Repeat same-input builds produced identical artifact hashes and removed synthetic stale staging material. Separate read-only reviewer found no Critical/Important defect; minor BR-01 companion provenance and BR-02 bidirectional page-independence test gaps were verified and resolved. Whole milestone1.2 code/package review, report docs/dev/reports/phases/1/1.2.md, TODO None and HANDOFF included. Release integration/download verification remain pending.
-        - [ ] T-006 — Review, test and report the browser phase
+        - [x] T-006 — Review, test and report the browser phase
             Depends on: T-003, T-005 and milestones 1.1/1.2 completion/closure.
             Scope: full Phase 1 code review and applicable model/UI/package regressions; prepare complete release notes and source/artifact coverage, docs/dev/reports/phases/1/PHASE-REPORT.md and HANDOFF.
             Acceptance: scoped R-01–03/R-10–11 exits, task persistence audit and required findings resolved; clearly separate observed checks and unavailable evidence. No extension/Electron requirement is pulled into browser acceptance.
@@ -53,6 +53,7 @@ Each task includes focused test-first behavior checks where meaningful, implemen
 
 - [ ] Phase 2 — Windows Electron app
     - [ ] Milestone 2.1 — Portable desktop delivery
+            Evidence: Reviewed complete browser phase source, tests, packages and public claims; no remaining blocker/TODO. Clean candidate package:all built; model2 + Chromium UI2 + Firefox UI2 + extracted browser-package3 + clean-source release2 = 11 passing test executions. Independent review minor BR-01/BR-02 resolved. T-001–T-005 single-task result/evidence/checkbox commits audited and published. Phase report, HANDOFF, exact 0.1.0 notes and ignored highlights coverage prepared. Source/tag/asset publication is a pending postintegration transition, not claimed complete; native evidence limits retained.
         - [ ] T-007 — Host the shared browser UI in constrained Electron
             Depends on: T-006, Phase 1 published integration/release and Phase 2 activation.
             Scope: src/electron/main.cjs, desktop local entry wiring and tests/test_electron.py/probes; version 0.2.0 and required pinned desktop dependencies.
