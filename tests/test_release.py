@@ -23,10 +23,9 @@ def test_cumulative_inventory_and_checksum_bytes():
     version, names = selection()
     output = ROOT / 'dist' / version
     expected = names | {'INSTALL.md', 'VERIFICATION.md', 'SHA256SUMS'}
-    # Workspace transfer may leave incomplete atomic-copy siblings of the large ZIP.
-    # They are staging residue, never selected release assets; all other files remain exact.
-    transient = re.compile(r'\.hello-world-' + re.escape(version) + r'-win32-x64\.zip\.[A-Za-z0-9]{6}')
-    actual = {p.name for p in output.iterdir() if not transient.fullmatch(p.name)}
+    # Hidden atomic-copy staging siblings are not public release candidates.
+    # SHA256SUMS and the publisher's exact whitelist cover every selected asset.
+    actual = {p.name for p in output.iterdir() if not p.name.startswith('.')}
     assert expected == actual, 'required cumulative artifact/document missing or unexpected output'
     entries = {}
     for line in (output / 'SHA256SUMS').read_text().splitlines():

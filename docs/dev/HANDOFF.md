@@ -1,6 +1,6 @@
 # Project handoff
 
-Checkpoint: Phase 3 milestone 3.1 review Ready; T-015 publication/closure pending.
+Checkpoint: Phase 3 milestone 3.2 review Ready; T-017 publication/closure pending.
 
 ## Workflow and authority
 
@@ -22,3 +22,7 @@ T-011–014 implement page-owned sessions, window-bound sidebar and paired nativ
 ## Next boundary
 
 After milestone7 closure, complete T-016 all four packages/instructions/evidence and T-017 feasible extracted lifecycle matrix plus preserved-platform regressions. T-018 owns full phase/final report and notes. Integrate the complete verified phase explicitly into main, publish a clean-source v0.3.0 release with all seven assets and verify downloaded bytes. Stop at the final verified publication outcome. Never relabel modeled checks as native sidebar evidence or unavailable checks as passes.
+
+## Current cumulative delivery checkpoint
+
+Milestone7/3.1 is closed/read back. T-016 seven canonical0.3 assets are built/verified and issue25 closed. T-017 [milestone3.2](reports/phases/3/3.2.md) records35 passing test executions including actual extracted packages/broker matrix, preserved browser/desktop artifacts, screenshots and native/validator limits. No required defect/TODO. T-017 publication/issue26 and milestone8 closure follow this snapshot. Then T-018 finishes phase/final review, all applicable regression evidence and notes; integrate/publish main and final v0.3.0 with downloaded-byte verification.
