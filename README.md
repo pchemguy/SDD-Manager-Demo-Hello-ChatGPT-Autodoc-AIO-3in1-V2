@@ -22,4 +22,5 @@ Run python tools/check.py with suites model, ui, browser-package, electron, exte
 
 Accepted [brief](docs/dev/PROJECT.md), [architecture](docs/dev/ARCHITECTURE.md), [specification](docs/dev/SPEC.md), [plan](docs/dev/PLAN.md) and [tasks](docs/dev/TASKS.md) define the scope. Document QC passed before implementation. [HANDOFF](docs/dev/HANDOFF.md) owns the current checkpoint. Development uses [SDD Manager](SDD-MANAGER.md); see [AI-assisted disclosure](AI_DISCLOSURE.md).
 
-Latest published release at this checkpoint: [v0.2.0](https://github.com/pchemguy/SDD-Manager-Demo-Hello-ChatGPT-Autodoc-AIO-3in1-V2/releases/tag/v0.2.0), with all five downloaded assets hash verified. Version0.3.0 candidate generation does not itself claim release publication.
+
+Latest delivered release at this checkpoint: [v0.3.0](https://github.com/pchemguy/SDD-Manager-Demo-Hello-ChatGPT-Autodoc-AIO-3in1-V2/releases/tag/v0.3.0). All listed release assets were downloaded and checksum-verified through the release-asset API.
