@@ -52,7 +52,7 @@ Maintain project-specific navigation and validated setup/check commands here as 
 
 ## Current project navigation
 
-The [PROJECT brief](docs/dev/PROJECT.md) describes the accepted Hello World application. [DOCS_TASKS](docs/dev/DOCS_TASKS.md) owns preparation checkboxes and [DOCS_PREPARATION](docs/dev/DOCS_PREPARATION.md) owns decisions, approvals and QC evidence. Recover later state through [HANDOFF](docs/dev/HANDOFF.md) and Git before continuing. Validated browser build/check commands are listed below; future-platform commands remain planned.
+The [PROJECT brief](docs/dev/PROJECT.md) describes the accepted Hello World application. [DOCS_TASKS](docs/dev/DOCS_TASKS.md) owns preparation checkboxes and [DOCS_PREPARATION](docs/dev/DOCS_PREPARATION.md) owns decisions, approvals and QC evidence. Recover later state through [HANDOFF](docs/dev/HANDOFF.md) and Git before continuing. Validated browser build/check commands are listed below; all delivered build/check commands are described in README and tools/check.py.
 
 ## Design and implementation locations
 
@@ -64,8 +64,12 @@ The intended system is defined by [ARCHITECTURE](docs/dev/ARCHITECTURE.md), [DEC
 
 ## Validated browser commands
 
-The browser phase implements npm ci, npm run build:browser, npm run package:browser and npm run package:all. Pytest suites model, ui (--browser chromium or firefox), browser-package and release (--version 0.1.0) are validated through python tools/check.py. Install Python dependencies into .tools/python from requirements-dev.txt; browser binaries remain under the absolute project .tools/browsers path. The diagnosed Firefox process-local override and official OCI Chromium provenance are in reports/phases/1/T-001.md; do not apply those environment settings to untrusted external browsing. Packaging future platforms remains gated by their tasks.
+The browser phase implements npm ci, npm run build:browser, npm run package:browser and npm run package:all. Pytest suites model, ui (--browser chromium or firefox), browser-package and release (--version 0.1.0) are validated through python tools/check.py. Install Python dependencies into .tools/python from requirements-dev.txt; browser binaries remain under the absolute project .tools/browsers path. The diagnosed Firefox process-local override and official OCI Chromium provenance are in reports/phases/1/T-001.md; do not apply those environment settings to untrusted external browsing. Cumulative release publication uses package:all at the clean release commit.
 
 ## Desktop development
 
 Electron development dependencies require Node.js 22.12+. The internal node tools/build.mjs --platform electron command stages host plus local renderer. python tools/check.py electron currently verifies real host logic against a modeled Electron API boundary and staged assets; native Windows execution is not implied. npm run package:electron and npm run package:all produce the complete unsigned Windows x64 runtime. The electron suite additionally checks the actual PE/resources/renderer and upstream runtime preservation; Windows-native execution remains excluded on Linux.
+
+## Extension development
+
+The Chromium/Firefox native adapters and bundles are implemented. npm run package:extensions produces the paired development ZIP/XPI; package:all rebuilds all four variants. The extensions, extension-protocol and extension-sidebar suites accept --browser chromium or firefox. Native-shaped API seams and real DOM checks are modeled transport evidence, not native sidebar passes. Full managed Chromium is blocked by process-singleton socket EPERM even with default --no-sandbox; do not repeat identical launches or substitute personal browsers. Managed Firefox157 temporary loading passed via isolated web-ext10.8.0, but native toolbar/sidebar interaction remains unverified. Validator minimum-version advisories and exact checks are in Phase3 reports/VERIFICATION. The Firefox process-local sandbox override is only for trusted local tests/about:blank.

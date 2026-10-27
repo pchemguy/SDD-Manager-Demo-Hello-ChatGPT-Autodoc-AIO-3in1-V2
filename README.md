@@ -1,29 +1,25 @@
 # Hello World
 
-Hello World with three vertically stacked radio buttons: red, blue and green. Selecting a color updates the message immediately. Each session starts red; selections are not saved.
+Hello World with three vertically stacked native radio buttons: red, blue and green. Selecting a color updates the message immediately. Each session starts red; preferences are not saved.
 
-## Browser app
+## Platforms
 
-The browser application is implemented and tested in isolated Chromium and Firefox. The main message stays centered independently of the settings panel in wide windows; narrow windows stack both panels. Keyboard arrows/Space and visible focus are supported.
+- Browser: deploy the static ZIP at any HTTP/HTTPS subpath. Wide windows center the message independently of the right settings panel; narrow windows stack both panels.
+- Windows x64: extract the complete unsigned portable Electron 45 ZIP and run HelloWorld.exe. Runtime libraries/assets are included; no separate Node.js or server is needed. Native Windows execution is unverified on the Linux build host.
+- Desktop Chromium/Firefox: load the development unpacked/temporary package and use its toolbar on an ordinary webpage. The native sidebar controls that window's active activated document. No dedicated application tab/backend is needed. Reload/navigation requires reactivation and starts red.
 
-Run npm ci and npm run package:all to create the current browser deployment candidate under dist/0.2.0. Extract its browser ZIP and deploy all files together to a static HTTP/HTTPS host. See [installation instructions](docs/INSTALL.md) and [verification scope](docs/VERIFICATION.md). Published release availability is reported separately; no release is claimed from local candidate generation.
+Read [installation and lifecycle instructions](docs/INSTALL.md) and [verification scope](docs/VERIFICATION.md). Development packages are unsigned and not store-distributed. Native Firefox 157 temporary loading is observed; native toolbar/sidebar interaction is unverified. Full Chromium is blocked by the host's Unix-socket restriction. Minimum-version metadata validator advisories are disclosed.
 
-## Windows Electron app
+## Build and verify
 
-The current candidate includes an unsigned portable Windows x64 package with the complete Electron 45 runtime. Extract all files and run HelloWorld.exe; no separate Node.js or server is needed. Native Windows launch is unverified on the Linux build host. See the installation and verification documents for distribution status and checks. Paired Chromium/Firefox sidebar extensions are the next platform group.
+Use Node.js 22.12+ and Python 3.11+. For packaging-only setup, set ELECTRON_SKIP_BINARY_DOWNLOAD=1 in your shell before npm ci; the packager separately downloads the requested Windows runtime. Install Python dependencies with python -m pip install --target .tools/python -r requirements-dev.txt. Use the pinned runner's dedicated .tools/browsers location; [environment evidence](docs/dev/reports/phases/1/T-001.md) records provisioning and the trusted-local Firefox override.
 
-## Development setup
+npm run package:all creates four current-version archives, INSTALL.md, VERIFICATION.md and SHA256SUMS under dist/0.3.0. Individual package:browser, package:electron and package:extensions commands replace that version's output with their selected variants. Full releases always use package:all.
 
-Use Node.js 22.12+ and Python 3.11+. Run npm ci and python -m pip install --target .tools/python -r requirements-dev.txt. Set PLAYWRIGHT_BROWSERS_PATH to the absolute .tools/browsers directory when installing the pinned runner's managed browsers. [Provisioning evidence](docs/dev/reports/phases/1/T-001.md) records this host's official-download recovery and scoped Firefox override.
-
-The Python dispatcher uses the dedicated dependency/browser locations. Validated commands include python tools/check.py model, python tools/check.py ui --browser chromium, the corresponding firefox UI command, python tools/check.py browser-package and python tools/check.py release --version 0.2.0. Native/other-platform suites become available with their implementation tasks; absent suites fail explicitly.
+Run python tools/check.py with suites model, ui, browser-package, electron, extension-protocol, extension-sidebar, extensions and release. Use --browser chromium or firefox for browser-specific suites and --version 0.3.0 for release. The dispatcher owns dedicated browser/dependency paths and deadlines. Mozilla validation uses isolated web-ext 10.8.0, installed with npm install --prefix .tools/web-ext --save-exact web-ext@10.8.0; run its bin/web-ext.js lint on the Firefox build/extracted package. Native/modelled evidence remains distinct.
 
 ## Project documents
 
-The accepted [brief](docs/dev/PROJECT.md), [architecture](docs/dev/ARCHITECTURE.md), [specification](docs/dev/SPEC.md), [plan](docs/dev/PLAN.md) and [tasks](docs/dev/TASKS.md) define the complete intended product. Whole-package documentation QC passed before implementation. Current progress and pending effects are recoverable through [HANDOFF](docs/dev/HANDOFF.md).
+Accepted [brief](docs/dev/PROJECT.md), [architecture](docs/dev/ARCHITECTURE.md), [specification](docs/dev/SPEC.md), [plan](docs/dev/PLAN.md) and [tasks](docs/dev/TASKS.md) define the scope. Document QC passed before implementation. [HANDOFF](docs/dev/HANDOFF.md) owns the current checkpoint. Development uses [SDD Manager](SDD-MANAGER.md); see [AI-assisted disclosure](AI_DISCLOSURE.md).
 
-Development uses [SDD Manager](SDD-MANAGER.md). See the [AI-assisted development disclosure](AI_DISCLOSURE.md).
-
-Latest delivered release at this checkpoint: [v0.1.0](https://github.com/pchemguy/SDD-Manager-Demo-Hello-ChatGPT-Autodoc-AIO-3in1-V2/releases/tag/v0.1.0). All listed release assets were downloaded and checksum-verified through the release-asset API.
-
-Latest delivered release at this checkpoint: [v0.2.0](https://github.com/pchemguy/SDD-Manager-Demo-Hello-ChatGPT-Autodoc-AIO-3in1-V2/releases/tag/v0.2.0). All listed release assets were downloaded and checksum-verified through the release-asset API.
+Latest published release at this checkpoint: [v0.2.0](https://github.com/pchemguy/SDD-Manager-Demo-Hello-ChatGPT-Autodoc-AIO-3in1-V2/releases/tag/v0.2.0), with all five downloaded assets hash verified. Version0.3.0 candidate generation does not itself claim release publication.
