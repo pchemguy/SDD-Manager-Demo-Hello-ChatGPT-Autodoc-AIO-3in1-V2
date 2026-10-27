@@ -16,7 +16,7 @@ Outcome: a usable static Hello World application satisfying R-01–03 and browse
 | 1.2 — Deployable browser package | Depends on 1.1; produce a relocatable static build/archive with deployment and verification records | Extracted build served from a subpath, local assets resolved, no development runtime requirement, notices/instructions and archive exclusions/checksums verified |
 | 1.3 — Phase review | Depends on both delivery milestones completing/closing | Full browser scope code review, available regressions, report, release-source/package readiness and no unresolved required defect |
 
-At 1.1, the working browser UI demonstrates the central interaction and responsive arrangement; evidence can inform human direction to amend or continue without inventing an extra approval gate. At 1.2, an extracted deployment demonstrates distribution independently of source checkout. Two delivery milestones preserve that meaningful distinction without padding this small UI into artificial subsystems.
+At 1.1, the working browser UI demonstrates the central interaction and responsive arrangement; evidence can inform human direction to amend or continue. At 1.2, an extracted deployment demonstrates distribution independently of source checkout. Two delivery milestones preserve that meaningful distinction without padding this small UI into artificial subsystems.
 
 ## Phase 2 — Windows Electron app
 
@@ -56,5 +56,3 @@ Unavailable native Windows execution and unavailable full-browser checks after b
 ## Integration and releases
 
 After a phase review and its hosted closures, verify task persistence and the complete phase, explicitly merge into the actual default branch, verify the merged state and publish/read back. Release publication then follows as a coordinator/forge transition after phase integration, not an impossible preintegration delivery-task prerequisite. Prepare/finalize exact release notes, create the eligible default-branch release commit, publish its tag, upload cumulative verified assets, and read back the published release and downloaded bytes under R-10. Release publication failure retains that transition and blocks starting the next phase; it does not erase implementation evidence.
-
-All release operations are authorized by the project request. Implementation phases and hosted objects activate only at their eligible boundaries. Complete document preparation/QC and its published default-branch integration must precede the first implementation branch. Implementation range selection and human stopping instructions remain independent of this delivery strategy.

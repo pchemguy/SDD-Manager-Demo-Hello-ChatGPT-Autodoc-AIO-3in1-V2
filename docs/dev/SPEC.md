@@ -94,7 +94,7 @@ Follow the repository [browser policy](../../.agents/plugins/sdd-manager/assets/
 
 Provisioning requires two isolated context/page interaction/render/teardown cycles per usable browser mode before application acceptance. Exercise production built/extracted assets, screenshots/computed color, responsive layout, keyboard controls and lifecycle errors. Downloads or synthetic fixtures alone prove no product acceptance.
 
-Unavailable Windows-native execution and unavailable full-browser checks after policy-compliant diagnosis are excluded for that execution; retain target artifacts and perform all feasible package, protocol, adapter and working-headless checks. A feasible required build/check failure remains blocking. Report exclusions plainly, without marking them passed or demanding a new waiver. No runtime test or platform compatibility is claimed during document preparation.
+Unavailable Windows-native execution and unavailable full-browser checks after policy-compliant diagnosis are excluded for that execution; retain target artifacts and perform all feasible package, protocol, adapter and working-headless checks. A feasible required build/check failure remains blocking. Report exclusions plainly, without marking them passed or demanding a new waiver.
 
 ## Acceptance scenarios and traceability
 

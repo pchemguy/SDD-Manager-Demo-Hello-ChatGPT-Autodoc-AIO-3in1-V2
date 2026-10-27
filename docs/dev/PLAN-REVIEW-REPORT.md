@@ -2,7 +2,7 @@
 
 ## Current gate
 
-State: Ready for TASKS derivation after combined PLAN/layout assessment. Initial strategy review and its limited scope remain below. PLAN and layout have no focused children.
+State: Ready for TASKS derivation after Revision 2 combined assessment; current identities are recorded there. Initial strategy review and its limited scope remain below. PLAN and layout have no focused children.
 
 ## Reviewed identities
 
@@ -44,3 +44,14 @@ Owner: sdd-plan, 2026-10-27. This is the planned placement recheck after strateg
 Mapped every decomposed production component to source, tests/probes, build/package ownership and user/evidence documentation. Checked the reverse ownership map, inward import rules, native adapter separation, phase-specific runtime output, ignored dedicated environments and archive allowlists. The proposed root command interface supports bounded TASKS verification without claiming scripts exist. Native/full-browser exclusions remain evidence limits rather than mandatory native-only tasks.
 
 Local links and heading/list separation checked; physical directories are clearly marked planned. Counts and scope rationale from initial review remain applicable. Findings: none. Combined gate: Ready; no remaining blocker to task derivation. Actual implementations, tools, browser execution, CI access and artifact builds remain unverified.
+
+## Revision 2 — Current product/delivery content
+
+Finding PLAN-01: the final PLAN paragraph restated document-preparation authority, tracking activation and approval boundaries. Those workflow facts belong in DOCS_PREPARATION/HANDOFF, where they are already retained. sdd-plan removed that paragraph and the incidental approval-gate phrase at milestone 1.1. The platform phases, milestones, scope, exits, releases and native evidence policy are unchanged.
+
+- Current PLAN SHA-256: `2abbae6bc94a9956f1e55b4cbc3ba4c98a75a6d5c0e64d0be655b942d6a259cf`.
+- Current SPEC SHA-256: `77d1de36700205fe0ee520e81aba2194043b462db5cfddbe1b356b36684b8cec`.
+- Current SPEC review SHA-256: `7fb8aa770f25cd7d2b0740a194df77163ec84c83c34e6ef57edb6ff9ec27cc92`.
+- layout SHA-256: `fa5cbc5d3b77c72ea102006f41ff44b436e8044d85da0ec3b4fdbbc70339ec72` (unchanged).
+
+Rechecked R-01–R-11 coverage and all eight milestone identities/exits against TASKS and the unchanged placement map. Delivery milestone counts remain 2/1/2 with the original retained-scope rationale. PLAN-01 resolved; current combined gate Ready. No new implementation scope, runtime tests or whole-package QC.

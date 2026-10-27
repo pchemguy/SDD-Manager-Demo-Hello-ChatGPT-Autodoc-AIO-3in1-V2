@@ -46,3 +46,16 @@ DOCS-001 through DOCS-007 publication and completed issue closures have been ver
 ## Platform evidence consulted
 
 Official [Chromium activeTab](https://developer.chrome.com/docs/extensions/develop/concepts/activeTab), [Side Panel API](https://developer.chrome.com/docs/extensions/reference/api/sidePanel), [Firefox sidebar opening](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/open) and [Firefox permissions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) documentation was consulted on 2026-10-27. Temporary access and native sidebar support are documented capabilities, not tested project compatibility. The proposed reset/reactivation policy intentionally applies at every full document navigation even where the browser retains a same-origin activeTab grant.
+
+## Current scoped authoring corrections
+
+After DOCS-008 first completion and verified issue closure at 23818b50a1a3b1c01e061ee1ed291f237ab68a73, the owner content check identified SPEC-01 and PLAN-01: preparation-process statements in product roots. Removed only those statements; authority/initial acceptance evidence stays in this record/HANDOFF. The scoped owners appended SPEC Revision 1, PLAN Revision 2 and TASKS Revision 2, preserving their original reviews and task definitions. These corrections do not reopen first-approval issues, perform DOCS-009, merge documentation or authorize implementation.
+
+- Current `SPEC.md` SHA-256: `77d1de36700205fe0ee520e81aba2194043b462db5cfddbe1b356b36684b8cec`.
+- Current `SPEC-REVIEW-REPORT.md` SHA-256: `7fb8aa770f25cd7d2b0740a194df77163ec84c83c34e6ef57edb6ff9ec27cc92`.
+- Current `PLAN.md` SHA-256: `2abbae6bc94a9956f1e55b4cbc3ba4c98a75a6d5c0e64d0be655b942d6a259cf`.
+- Current `PLAN-REVIEW-REPORT.md` SHA-256: `4b9647f93e24c22e32ebc5becd12f39cf4b6f025cbc1577751a4d581cf395edd`.
+- Current `TASKS.md` SHA-256: `637aebed34d991190c6cc899f8a2ce4401a70f0c2cfe6130af2fdc568761b56c`.
+- Current `TASKS-REVIEW-REPORT.md` SHA-256: `7b3bd8c78532ff035f45db8fa4de6a05c7f034b26352843e156ebddb84a4f757`.
+
+Current scoped gates: Ready; no remaining confirmed authoring finding. Publish/read back this correction, reconcile hosted evidence and stop before whole-package QC.

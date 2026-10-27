@@ -1,6 +1,6 @@
 # Project handoff
 
-Checkpoint: autodoc/onepass main preparation through DOCS-008, ready to publish its task-definition checkpoint and stop.
+Checkpoint: autodoc/onepass through DOCS-008, first completion published and closed; scoped content corrections prepared for publication.
 Recover subsequent publication and hosted effects from Git and the linked records; this snapshot cannot prove its own later push or issue closure.
 
 Outcome: accepted PROJECT and autodoc-preapproved ARCHITECTURE, DECOMPOSITION, SPEC, PLAN, layout and TASKS prepared; scoped SPEC, PLAN/layout and TASKS reviews support their respective downstream gates. TASKS defines 18 unchecked implementation tasks across the three requested platform phases. No product implementation or whole-package QC performed.
@@ -19,7 +19,7 @@ Outcome: accepted PROJECT and autodoc-preapproved ARCHITECTURE, DECOMPOSITION, S
 - Approval: user “k” accepted PROJECT proposal at 9106f4c05408c07feff7e0a3680b353a963b30ed unchanged; acceptance checkpoint 42827edda4f060427527fff3cc09a5ac8aa150b3 was published and issue 2 closed. Autodoc preapproves downstream documents through TASKS.
 - Exact stop: after DOCS-008 publication and issue closure, before DOCS-009 whole-package QC. No documentation merge, implementation branch/phase projection, dependency installation or product execution at this stop.
 - Next direction required: explicit advance to package QC; implementation also requires a selected authorized range and the remaining preparation/integration/activation gates. No repeat PROJECT approval is required.
-- Tracking: root policy enables preparation/implementation; documentation milestone 1 and issues 1–9 verified. Issues 1–7 are completed before this snapshot; issue 8 closure follows publication; issue 9 and milestone remain open. No product-phase objects created.
+- Tracking: root policy enables preparation/implementation; documentation milestone 1 and issues 1–9 verified. Issues 1–8 completed closures are verified; issue 9 and milestone remain open. No product-phase objects created.
 - Reporting: Standard. API reads via GitHub app work; its comment/update returned integration 403. Supplied-token direct API successfully performs required tracking writes. Credentials stay protected separately and are excluded from source/packages.
 
 ## Branches and return
@@ -32,7 +32,7 @@ Outcome: accepted PROJECT and autodoc-preapproved ARCHITECTURE, DECOMPOSITION, S
 
 ## Pending work and next action
 
-- Publish/read back the DOCS-008 owning commit and close/read back issue 8; verify issue 9 and milestone 1 remain open. On recovery, reconcile uncertain effects before replay.
+- DOCS-008 owning commit 23818b50a1a3b1c01e061ee1ed291f237ab68a73 and issue 8 closure were verified. Publish/read back the scoped SPEC-01/PLAN-01 content correction and dependent scoped rechecks; verify issue 9 and milestone 1 remain open. On recovery, reconcile uncertain effects before replay.
 - Pause at the autodoc boundary. An explicit QC advance selects DOCS-009 review and in-scope repairs; passing scoped reports do not replace that assessment.
 - After passing whole-package QC: publish its owning result, close issue 9, explicitly merge documentation into actual main, verify/publish the merge, then close/read back the preparation milestone. Preserve the final implementation checkpoint unless its preapproval and range are established.
 - Implementation uses phase branches and one verified task per commit, publication/readback before advancement and eligible phase-only tracking. Version targets: browser 0.1.0, desktop 0.2.0, paired sidebars 0.3.0. Report unavailable native/full-browser evidence under policy without dropping artifacts or feasible checks.

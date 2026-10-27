@@ -2,7 +2,7 @@
 
 ## Current gate
 
-State: Ready as an executable task definition after the scoped correction below. Governing upstream documents and scoped reviews are current; TASKS does not authorize implementation, package QC, phase activation or preparation integration by itself. No task children.
+State: Ready as an executable task definition after Revisions 1–2 below. Governing upstream documents and scoped reviews are current; TASKS does not authorize implementation, package QC, phase activation or preparation integration by itself. No task children.
 
 Reviewed current TASKS SHA-256: `637aebed34d991190c6cc899f8a2ce4401a70f0c2cfe6130af2fdc568761b56c`.
 
@@ -44,3 +44,9 @@ Current revised TASKS identity is recorded above. T-002 now owns initial browser
 Re-ran the native checklist parser for phases 1–3; verified 18 unique monotonic task IDs, all predecessor references resolve earlier in the list, PLAN and TASKS phase/milestone identities agree, review thresholds and folded report/HANDOFF obligations are present, and each task remains unchecked. Local links, Markdown separation, exact four-space hierarchy and credential absence checked. TASKS-01 resolved; no remaining confirmed finding. Gate: Ready for the separate package-QC workflow when explicitly advanced.
 
 Limits: no product source, tests, dependency installs, packages, native compatibility, full documentation-package QC, integration or releases are claimed. All test/build commands are planned implementation interfaces.
+
+## Revision 2 — Upstream content-only correction recheck
+
+TASKS SHA-256 remains `637aebed34d991190c6cc899f8a2ce4401a70f0c2cfe6130af2fdc568761b56c`. Current PLAN SHA-256 is `2abbae6bc94a9956f1e55b4cbc3ba4c98a75a6d5c0e64d0be655b942d6a259cf`; current PLAN review SHA-256 is `4b9647f93e24c22e32ebc5becd12f39cf4b6f025cbc1577751a4d581cf395edd`; current SPEC SHA-256 is `77d1de36700205fe0ee520e81aba2194043b462db5cfddbe1b356b36684b8cec`; current SPEC review SHA-256 is `7fb8aa770f25cd7d2b0740a194df77163ec84c83c34e6ef57edb6ff9ec27cc92`. Other governing inputs retain their listed identities.
+
+Reviewed the exact upstream differences for SPEC-01/PLAN-01: only preparation-process statements were removed. Product behavior and delivery/milestone exits are unchanged. Rechecked task acceptance/phase mappings, dependencies, report ownership and planned command feasibility; the 18-task hierarchy and prior count assessment remain valid. Both upstream findings resolved; no TASKS change or additional issue needed. Current scoped derivation gate Ready. Whole-package QC remains pending at the autodoc stop.

@@ -2,7 +2,7 @@
 
 ## Current gate
 
-State: Ready for dependent PLAN authoring. Reviewed the complete SPEC root against accepted PROJECT and autodoc-preapproved ARCHITECTURE/DECOMPOSITION. No focused children are needed for this bounded product. This is document conformance, not runtime verification.
+State: Ready for dependent PLAN authoring after Revision 1; the current SPEC identity is recorded there. Reviewed the complete SPEC root against accepted PROJECT and autodoc-preapproved ARCHITECTURE/DECOMPOSITION. No focused children are needed for this bounded product. This is document conformance, not runtime verification.
 
 ## Reviewed identities
 
@@ -25,3 +25,9 @@ Owner: sdd-specify, 2026-10-27. Manually compared the full request and each desi
 Findings: none remaining. Browser cached-document restoration is explicitly treated as a fresh activation session to make the accepted full-navigation reset policy complete. Timing/error precision and the 768-pixel responsive breakpoint are routine refinements within the approved brief. There is no added persistence or platform capability.
 
 Limits: no dependency installation, application tests, packaged artifacts, browser compatibility or native Windows execution performed. PLAN still requires its own strategy/layout review. Whole-package QC is not performed by this scoped assessment.
+
+## Revision 1 — Product-content boundary correction
+
+Finding SPEC-01: R-11 contained a sentence about what document preparation had not verified. That was workflow evidence rather than a product contract. sdd-specify removed only that sentence; actual evidence limits remain in this report and DOCS_PREPARATION. Current SPEC SHA-256: `77d1de36700205fe0ee520e81aba2194043b462db5cfddbe1b356b36684b8cec`. PROJECT/ARCHITECTURE/DECOMPOSITION identities are unchanged.
+
+Rechecked R-01–R-11 and the acceptance table: behavior, artifact requirements, verification exclusions, dependency seams and coverage are unchanged. Inspected the edited paragraph and local links/Markdown. SPEC-01 resolved; current conformance gate Ready. No runtime execution or whole-package QC performed.
