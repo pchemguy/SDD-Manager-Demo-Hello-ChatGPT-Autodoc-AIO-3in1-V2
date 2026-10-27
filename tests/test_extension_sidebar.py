@@ -19,6 +19,7 @@ def test_binding_selection_and_reopen(result):
 
 def test_races_are_bound_and_latest_choice_converges(result):
     assert result['coalesced']==['red']
+    assert result['reselected']['ui']['color']==result['reselected']['actual']=='red'
     assert result['switched']['ui']['color']=='green'
     assert result['switched']['old']=='blue' and result['switched']['target']=='green' and result['switched']['wrong']==0
     assert result['late']['color']=='green'

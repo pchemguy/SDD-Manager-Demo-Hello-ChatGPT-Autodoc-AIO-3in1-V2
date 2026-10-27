@@ -44,3 +44,9 @@ def test_built_background_and_native_adapter(probe,browser_name):
     assert result['transport'][1][1]==31 and result['transport'][1][3]=={'frameId':0}
     assert [e['type'] for e in result['delivered']]==['activated','loading','removed','activation']
     assert result['remaining']==0
+
+def test_built_content_entry_uses_native_runtime_namespace(probe,browser_name):
+    result=probe('extension-entry',browser_name)
+    assert result['panels']==result['listeners']==1
+    assert result['response']['color']=='red' and result['response']['ok'] is True
+    assert result['errors']==[]

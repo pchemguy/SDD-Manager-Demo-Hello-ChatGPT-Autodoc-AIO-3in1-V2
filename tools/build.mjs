@@ -54,6 +54,6 @@ if (process.argv[1] && pathToFileURL(process.argv[1]).href === import.meta.url) 
   const platform = process.argv[process.argv.indexOf('--platform') + 1];
   if (platform === 'browser') await buildBrowser();
   else if (platform === 'electron') await buildElectronInput();
-  else if (platform === 'chromium') await buildExtension(platform);
+  else if (['chromium', 'firefox'].includes(platform)) await buildExtension(platform);
   else throw new Error('Unsupported build platform: ' + platform);
 }

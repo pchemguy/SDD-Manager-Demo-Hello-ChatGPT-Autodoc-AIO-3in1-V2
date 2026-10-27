@@ -5,7 +5,7 @@ export function createSidebar(root, adapter) {
   let disposed = false, generation = 0, windowId = null, currentTabId = null, binding = null;
   const status = root.ownerDocument.createElement('p');
   status.setAttribute('role', 'status'); status.setAttribute('aria-live', 'polite');
-  const controls = mountColorControls(root, { disabled: true, onChange: select }); root.append(status);
+  const controls = mountColorControls(root, { disabled: true, onChange: select, onReselect: select }); root.append(status);
   const live = target => !disposed && binding === target && target.generation === generation;
   function unavailable(text = 'Unavailable. Use the toolbar on a supported webpage to activate.') {
     binding = null; controls.setState('red', true); status.textContent = text;
@@ -38,7 +38,7 @@ export function createSidebar(root, adapter) {
     } catch { if (!disposed && mine === generation) unavailable(); }
   }
   function select(color) {
-    const target = binding; if (!target || !live(target)) return;
+    const target = binding; if (!target || !live(target) || (!target.busy && color === target.color)) return;
     target.queued = color; controls.setState(target.color, false); pump(target);
   }
   async function pump(target) {
