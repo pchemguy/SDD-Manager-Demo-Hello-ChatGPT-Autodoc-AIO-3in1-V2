@@ -48,12 +48,12 @@ Each task includes focused test-first behavior checks where meaningful, implemen
             Acceptance: scoped R-01–03/R-10–11 exits, task persistence audit and required findings resolved; clearly separate observed checks and unavailable evidence. No extension/Electron requirement is pulled into browser acceptance.
             Verification: python tools/check.py model; both browser ui suites; python tools/check.py browser-package; python tools/check.py release --version 0.1.0. Review code separately from test execution. Persist report/notes/HANDOFF and this checkbox together.
             Transition: after issue/review milestone closure, coordinator verifies and explicitly integrates/publishes the complete phase, then finalizes default-branch release commit/tag and publishes verified cumulative assets with download readback. No phase 2 activation before that transition completes.
+            Evidence: Reviewed complete browser phase source, tests, packages and public claims; no remaining blocker/TODO. Clean candidate package:all built; model2 + Chromium UI2 + Firefox UI2 + extracted browser-package3 + clean-source release2 = 11 passing test executions. Independent review minor BR-01/BR-02 resolved. T-001–T-005 single-task result/evidence/checkbox commits audited and published. Phase report, HANDOFF, exact 0.1.0 notes and ignored highlights coverage prepared. Source/tag/asset publication is a pending postintegration transition, not claimed complete; native evidence limits retained.
 
 ## Phase 2 — Windows Electron app
 
 - [ ] Phase 2 — Windows Electron app
-    - [ ] Milestone 2.1 — Portable desktop delivery
-            Evidence: Reviewed complete browser phase source, tests, packages and public claims; no remaining blocker/TODO. Clean candidate package:all built; model2 + Chromium UI2 + Firefox UI2 + extracted browser-package3 + clean-source release2 = 11 passing test executions. Independent review minor BR-01/BR-02 resolved. T-001–T-005 single-task result/evidence/checkbox commits audited and published. Phase report, HANDOFF, exact 0.1.0 notes and ignored highlights coverage prepared. Source/tag/asset publication is a pending postintegration transition, not claimed complete; native evidence limits retained.
+    - [x] Milestone 2.1 — Portable desktop delivery
         - [x] T-007 — Host the shared browser UI in constrained Electron
             Depends on: T-006, Phase 1 published integration/release and Phase 2 activation.
             Scope: src/electron/main.cjs, desktop local entry wiring and tests/test_electron.py/probes; version 0.2.0 and required pinned desktop dependencies.
@@ -66,13 +66,14 @@ Each task includes focused test-first behavior checks where meaningful, implemen
             Acceptance: R-09 complete portable ZIP with executable/native runtime/app resources and notices; safe relocatable extraction, no source checkout, separate Node installation, server or elevation needed. Report unsigned status.
             Verification: npm run package:electron; python tools/check.py electron. Validate actual archive/PE architecture/resource and relative entry contents, integrity and feasible extracted launch. Unavailable native launch is excluded and reported; inability to produce the artifact is a real build blocker.
             Evidence: Complete unsigned Windows x64 portable archive produced with Electron45 runtime. RED missing archive; GREEN electron5 passed, including actual AMD64 PE, CRC, local renderer/version and byte equality for all unchanged upstream SDK resources/licenses. Default checksum validation retained. Native Windows launch unavailable/excluded; see docs/dev/reports/phases/2/T-008.md.
-        - [ ] T-009 — Verify cumulative browser and desktop distribution
+        - [x] T-009 — Verify cumulative browser and desktop distribution
             Depends on: T-007, T-008.
             Scope: docs/INSTALL.md, README, cumulative package selection/metadata, tests/test_release.py and earlier-platform regressions.
             Acceptance: rebuilt version 0.2.0 browser/Windows archives, consistent source/version/hashes, correct static/portable instructions and candid evidence. Browser behavior and relocatable deployment remain intact.
             Verification: npm run package:all; python tools/check.py release --version 0.2.0; python tools/check.py browser-package; both browser ui suites and feasible electron suite.
             Milestone exit: review all 2.1 host/package/cumulative code, applicable tests and blocker repairs; commit docs/dev/reports/phases/2/2.1.md, TODO dispositions and refreshed HANDOFF with this result/checkbox.
     - [ ] Milestone 2.2 — Phase review
+            Evidence: Cumulative0.2 browser/Windows packages and unsigned/static instructions verified. release2, browser-package3, electron5, Chromium UI2, Firefox UI2, model2 passed (16). Whole milestone source/package/doc review Ready; independent minor host-byte provenance gap fixed, no required defect/TODO. Milestone report docs/dev/reports/phases/2/2.1.md and refreshed HANDOFF included. Native Windows checks unavailable/excluded.
         - [ ] T-010 — Review, test and report the desktop phase
             Depends on: T-009 and milestone 2.1 completion/closure.
             Scope: Phase 2 cross-platform code review/regressions, complete release notes, docs/dev/reports/phases/2/PHASE-REPORT.md and HANDOFF.

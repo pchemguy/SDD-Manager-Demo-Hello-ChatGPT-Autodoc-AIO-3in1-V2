@@ -68,4 +68,4 @@ The browser phase implements npm ci, npm run build:browser, npm run package:brow
 
 ## Desktop development
 
-Electron development dependencies require Node.js 22.12+. The internal node tools/build.mjs --platform electron command stages host plus local renderer. python tools/check.py electron currently verifies real host logic against a modeled Electron API boundary and staged assets; native Windows execution is not implied. Complete runtime packaging is owned by T-008.
+Electron development dependencies require Node.js 22.12+. The internal node tools/build.mjs --platform electron command stages host plus local renderer. python tools/check.py electron currently verifies real host logic against a modeled Electron API boundary and staged assets; native Windows execution is not implied. npm run package:electron and npm run package:all produce the complete unsigned Windows x64 runtime. The electron suite additionally checks the actual PE/resources/renderer and upstream runtime preservation; Windows-native execution remains excluded on Linux.

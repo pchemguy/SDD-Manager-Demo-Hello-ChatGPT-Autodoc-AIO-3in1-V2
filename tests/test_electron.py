@@ -41,6 +41,7 @@ def test_complete_windows_runtime_and_x64_executable():
                     'resources/app/browser/index.html', 'resources/app/browser/app.js',
                     'resources/app/browser/style.css', 'resources/app/browser/build-info.json'}
         assert required <= names
+        assert archive.read('resources/app/main.cjs') == (root / 'src/electron/main.cjs').read_bytes()
         binary = archive.read('HelloWorld.exe')
         assert binary[:2] == b'MZ'
         offset = struct.unpack_from('<I', binary, 0x3c)[0]
