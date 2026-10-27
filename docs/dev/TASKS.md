@@ -8,11 +8,12 @@ Each task includes focused test-first behavior checks where meaningful, implemen
 
 - [ ] Phase 1 — Browser app
     - [ ] Milestone 1.1 — Usable browser experience
-        - [ ] T-001 — Establish isolated tooling and representative browser execution
+        - [x] T-001 — Establish isolated tooling and representative browser execution
             Depends on: none, after accepted preparation integration and Phase 1 tracking activation.
             Scope: package/lockfiles, contained pytest support requirements, tools/check.py dispatcher, tests/test_environment.py and bounded Node probes; ignore owned generated paths. Establish version 0.1.0 and planned command interfaces, selecting pinned supported dependency versions without implementing future platform runtime.
             Acceptance: dedicated absolute browser/Python paths and isolated profiles; Chromium shell and managed Firefox each assessed with two context/page interaction/render/teardown cycles. Provisioning and mode diagnosis evidence is separate from app acceptance. Follow policy recovery for full Chromium and Firefox EPERM; do not treat an unavailable full mode as failure of working headless coverage.
             Verification: npm ci; python tools/check.py environment --browser chromium; python tools/check.py environment --browser firefox. Record versions, commands, effective binaries/modes, source/integrity and actual exclusions in task evidence.
+            Evidence: Provisioned locked Playwright 1.64.1/esbuild 0.28.2 and project-local pytest 9.1.1 support; npm ci passed. Chromium shell 156.0.8078.4 and Firefox 157.0 each passed a pytest capability check with two isolated interaction/render/teardown cycles and inspected screenshots. CDN returned invalid HTML; matching official OCI layer size/digests verified before Chromium/FFmpeg extraction. Firefox uid_map EPERM diagnosed and process-local local-fixture override verified. No product acceptance or Windows/native-sidebar compatibility claimed. Detailed evidence: docs/dev/reports/phases/1/T-001.md. Phase 1 tracking and published preparation baseline verified.
         - [ ] T-002 — Implement shared color views and browser composition
             Depends on: T-001.
             Scope: src/core/colors.js, src/ui/message.js, src/ui/color-controls.js, src/browser entry/composition and initial tools/build.mjs browser staging; tests/test_model.py and initial tests/test_ui.py/probes.
