@@ -86,11 +86,12 @@ Each task includes focused test-first behavior checks where meaningful, implemen
 - [ ] Phase 3 — Sidebar extensions
     - [ ] Milestone 3.1 — Paired sidebar integration
             Evidence: Phase2 whole-code review Ready with no required defect/TODO; independent review minor host-byte provenance gap resolved. Sixteen scoped model/browser/UI/extracted-package/electron/release test executions passed. Reports/notes/HANDOFF prepared; native Windows exclusions explicit. T007-009 single-task publication/issues confirmed; integration and source-pinned0.2 release remain coordinator transitions.
-        - [ ] T-011 — Implement document-owned page state and validated messages
+        - [x] T-011 — Implement document-owned page state and validated messages
             Depends on: T-010, Phase 2 published integration/release and Phase 3 activation.
             Scope: src/extensions/protocol.js and page.js, isolated shared message mounting, tests/test_extension_protocol.py and ordinary-page fixtures/probes; version 0.3.0.
             Acceptance: R-04–06 page-side contracts: one isolated noninteractive overlay, red initial state, idempotent activation, validated own-extension messages, wrong-document/invalid inputs unchanged, full/cached navigation teardown and same-document preservation. No persistent storage or page-origin command bridge.
             Verification: python tools/check.py model; python tools/check.py extension-protocol. Exercise real page controller/DOM and modeled extension transport separately; confirm fixture geometry/focus unchanged and cleanup safe.
+            Evidence: Document-owned session and v1 validation implemented at0.3.0. RED2 intended behavioral failures; GREEN protocol/page3 in Chromium and3 in Firefox plus model2. Real HTML/XHTML DOM confirms isolated centered overlay, unchanged fixture geometry/focus, exclusive sender/nonce validation, idempotency, SPA preservation and cached-exit reset. Runtime transport modeled, native extension evidence deferred. Details T-011 report; phase3 projection issues20-27/milestones7-9 verified before execution.
         - [ ] T-012 — Implement window-bound sidebar synchronization and failures
             Depends on: T-011.
             Scope: src/extensions/sidebar HTML/JS/CSS, controls composition, tests/test_extension_sidebar.py and bounded adapter probes.

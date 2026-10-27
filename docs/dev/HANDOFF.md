@@ -1,6 +1,6 @@
 # Project handoff
 
-Checkpoint: Phase 2 complete, integrated and release v0.2.0 published/download-verified.
+Checkpoint: Phase 3 activated; T-011 page session verified; publication pending.
 
 ## Workflow and authority
 
@@ -34,3 +34,7 @@ Complete source 171b60cd4d8c0e325126fc8afa6c3686aba2b705 from phase/2-windows-el
 ## Observed v0.2.0 completion
 
 Release https://github.com/pchemguy/SDD-Manager-Demo-Hello-ChatGPT-Autodoc-AIO-3in1-V2/releases/tag/v0.2.0 at source 38a0404e8f376ffeae28b4c4492f010c0cda831f has complete expected assets and matching downloaded API bytes; published body equals retained notes and latest readback matches. No publication effect remains pending for this phase. Working branch main now records the completed outcome. Next: activate Phase 3 only, then continue the authorized remaining task range and cumulative releases.
+
+## Phase 3 activation and branch
+
+Working branch phase/3-sidebar-extensions, creation parent/integration target main, branch-off e1eb5d640b0386ddbff5d894f4e602f5a8008d01 after v0.2.0 published and five asset bytes verified. Current phase label and milestones 7 (3.1), 8 (3.2), 9 (review), task issues 20–27 were fully read back before implementation. Accepted document QC remains applicable; no changed requirement. T-011 owns page/protocol tests and version0.3.0. Continue T-012–018 and final cumulative release within the user's existing authorization. See [page evidence](reports/phases/3/T-011.md). Native Windows and browser-chrome limits remain explicit; no further approval pending.
