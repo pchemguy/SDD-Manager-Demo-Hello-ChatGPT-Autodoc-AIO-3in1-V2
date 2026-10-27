@@ -18,7 +18,7 @@ One document pass covers the entire user request. The three platform delivery ph
 | Task | Current evidence / decision basis |
 | --- | --- |
 | DOCS-001 | Existing four root files preserved byte for byte against initial commit f7bbec9bb22184bba19ed84097a7387aecd8e9c2; no copies needed. Provenance seed and merge verified below. Local task/control/handoff records created. Publication and issue closure must be confirmed from Git/provider. |
-| DOCS-002 | PROJECT proposal pending; no human acceptance. |
+| DOCS-002 | Onepass PROJECT proposal: `PROJECT.md`, SHA-256 `7e0d00117f35fe45c3b2893aaf2876ef344b53cda1c5e0573ba48c0fb54645e6`. User acceptance pending; DOCS-002 remains unchecked. Reviewed against full seed, principal-scope boundaries, material lifecycle/permission/layout decisions and delivery requirements. |
 | DOCS-003 | Pending PROJECT acceptance; later checkpoint preapproved by autodoc. |
 | DOCS-004 | Pending architecture; checkpoint preapproved by autodoc. |
 | DOCS-005 | Pending design and SPEC QC; checkpoint preapproved by autodoc. |
@@ -27,7 +27,7 @@ One document pass covers the entire user request. The three platform delivery ph
 | DOCS-008 | Pending preceding inputs and task QC; checkpoint preapproved by autodoc. |
 | DOCS-009 | Not selected at autodoc stop; package QC remains pending. |
 
-Material product proposals will be identified in PROJECT before its approval. No product behavior has been implemented or accepted beyond the user's seed.
+Material proposals are in [PROJECT](PROJECT.md): session-only color; narrow-window stacking; Windows x64 unsigned portable archive; toolbar activation with temporary access; isolated page overlay; per-window active-tab following and per-document state; explicit reactivation after full navigation; unsupported-page disabled controls; no signing/store delivery. These are agent proposals under the user's clarification request, not accepted human decisions. A shared native DOM approach is recommended over a full framework for the limited UI. Precise module and API contracts remain for downstream design.
 
 ## Initialization and current reset
 
@@ -41,4 +41,10 @@ Material product proposals will be identified in PROJECT before its approval. No
 
 ## Pending transitions
 
-Publish/read back this initialization checkpoint, attach its evidence to issue 1 and verify closure before PROJECT work. The sdd-docs-main milestone remains open through documentation preparation. PROJECT is not yet approved. No implementation phase is activated.
+Initialization commit 83278d9756e616bbe7a6327246cf5b782e59ade0 was pushed with exact-ref readback; issue 1 evidence and completed closure verified through the supplied-token API. The GitHub app connection returned 403 Resource not accessible by integration for comment/update; it remains suitable for reads, while the supplied token successfully performs the required writes. No credential value is retained here.
+
+Publish/read back the PROJECT proposal, then present it and pause for human acceptance. Issue 2 and DOCS-002 remain open/unchecked. The documentation milestone remains open. Do not begin ARCHITECTURE, package QC or implementation before their applicable gates.
+
+## Platform evidence consulted
+
+Official [Chromium activeTab](https://developer.chrome.com/docs/extensions/develop/concepts/activeTab), [Side Panel API](https://developer.chrome.com/docs/extensions/reference/api/sidePanel), [Firefox sidebar opening](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/open) and [Firefox permissions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) documentation was consulted on 2026-10-27. Temporary access and native sidebar support are documented capabilities, not tested project compatibility. The proposed reset/reactivation policy intentionally applies at every full document navigation even where the browser retains a same-origin activeTab grant.

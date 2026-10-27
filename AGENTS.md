@@ -49,3 +49,7 @@ Follow `sdd-manage`'s preparation and phase-activation workflows for required tr
 ## Project guidance
 
 Maintain project-specific navigation and validated setup/check commands here as they become established. Do not invent commands, paths, requirements or completion claims.
+
+## Current project navigation
+
+The [PROJECT brief](docs/dev/PROJECT.md) describes the proposed Hello World application. [DOCS_TASKS](docs/dev/DOCS_TASKS.md) owns preparation checkboxes and [DOCS_PREPARATION](docs/dev/DOCS_PREPARATION.md) owns decisions, approvals and QC evidence. Recover later state through [HANDOFF](docs/dev/HANDOFF.md) and Git before continuing. No product build or test commands are established yet.
