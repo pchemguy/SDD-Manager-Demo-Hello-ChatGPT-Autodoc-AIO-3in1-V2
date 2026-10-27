@@ -1,6 +1,6 @@
 # Project handoff
 
-Checkpoint: Phase 2 milestone 2.1 cumulative delivery verified; task publication and milestone closure require subsequent readback.
+Checkpoint: Phase 2 review Ready; T-010 publication/closure, integration and release pending.
 
 ## Workflow and authority
 
@@ -22,3 +22,7 @@ Desktop T-007/T-008 host and complete unsigned runtime are committed/published; 
 ## Next boundary
 
 Complete T-010 phase review, reports and release notes; integrate the fully verified phase explicitly into main, publish version 0.2.0 with rebuilt browser/Windows assets, verify downloaded bytes. Only then activate Phase 3. Continue through T-018 and all four version-0.3.0 packages/release; stop at the final verified publication outcome. No unresolved required defect or TODO at this checkpoint.
+
+## Phase review readiness
+
+T-007–009 are published and issues closed; milestone 2.1 closure is reconciled before completion. Whole phase code review and 16 test executions passed; [phase report](reports/phases/2/PHASE-REPORT.md) and retained RELEASE-NOTES.md cover the desktop delta. No required defect/TODO remains. T-010 persistence and review milestone closure follow this checkpoint; then integrate/publish main and verify the cumulative v0.2.0 release before activating Phase 3.

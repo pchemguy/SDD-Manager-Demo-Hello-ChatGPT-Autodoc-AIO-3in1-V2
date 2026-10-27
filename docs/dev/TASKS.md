@@ -52,7 +52,7 @@ Each task includes focused test-first behavior checks where meaningful, implemen
 
 ## Phase 2 — Windows Electron app
 
-- [ ] Phase 2 — Windows Electron app
+- [x] Phase 2 — Windows Electron app
     - [x] Milestone 2.1 — Portable desktop delivery
         - [x] T-007 — Host the shared browser UI in constrained Electron
             Depends on: T-006, Phase 1 published integration/release and Phase 2 activation.
@@ -72,9 +72,9 @@ Each task includes focused test-first behavior checks where meaningful, implemen
             Acceptance: rebuilt version 0.2.0 browser/Windows archives, consistent source/version/hashes, correct static/portable instructions and candid evidence. Browser behavior and relocatable deployment remain intact.
             Verification: npm run package:all; python tools/check.py release --version 0.2.0; python tools/check.py browser-package; both browser ui suites and feasible electron suite.
             Milestone exit: review all 2.1 host/package/cumulative code, applicable tests and blocker repairs; commit docs/dev/reports/phases/2/2.1.md, TODO dispositions and refreshed HANDOFF with this result/checkbox.
-    - [ ] Milestone 2.2 — Phase review
+    - [x] Milestone 2.2 — Phase review
             Evidence: Cumulative0.2 browser/Windows packages and unsigned/static instructions verified. release2, browser-package3, electron5, Chromium UI2, Firefox UI2, model2 passed (16). Whole milestone source/package/doc review Ready; independent minor host-byte provenance gap fixed, no required defect/TODO. Milestone report docs/dev/reports/phases/2/2.1.md and refreshed HANDOFF included. Native Windows checks unavailable/excluded.
-        - [ ] T-010 — Review, test and report the desktop phase
+        - [x] T-010 — Review, test and report the desktop phase
             Depends on: T-009 and milestone 2.1 completion/closure.
             Scope: Phase 2 cross-platform code review/regressions, complete release notes, docs/dev/reports/phases/2/PHASE-REPORT.md and HANDOFF.
             Acceptance: R-09 plus preserved R-01–03 and cumulative R-10–11; complete artifact/source coverage and task persistence evidence, required defects resolved and native limits explicit.
@@ -85,6 +85,7 @@ Each task includes focused test-first behavior checks where meaningful, implemen
 
 - [ ] Phase 3 — Sidebar extensions
     - [ ] Milestone 3.1 — Paired sidebar integration
+            Evidence: Phase2 whole-code review Ready with no required defect/TODO; independent review minor host-byte provenance gap resolved. Sixteen scoped model/browser/UI/extracted-package/electron/release test executions passed. Reports/notes/HANDOFF prepared; native Windows exclusions explicit. T007-009 single-task publication/issues confirmed; integration and source-pinned0.2 release remain coordinator transitions.
         - [ ] T-011 — Implement document-owned page state and validated messages
             Depends on: T-010, Phase 2 published integration/release and Phase 3 activation.
             Scope: src/extensions/protocol.js and page.js, isolated shared message mounting, tests/test_extension_protocol.py and ordinary-page fixtures/probes; version 0.3.0.
